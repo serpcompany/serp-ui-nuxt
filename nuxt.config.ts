@@ -5,7 +5,7 @@ const title = "UI Thing";
 const themeColor = "#111827";
 const twitterCard = "summary_large_image";
 const twitterCreator = "@iAm_BayBreezy";
-const url = process.env.PUBLIC_URL || "https://ui-thing.behonbaker.com";
+const url = process.env.PUBLIC_URL || "https://localhost:3000";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
