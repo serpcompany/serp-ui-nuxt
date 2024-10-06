@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20.11.1'
       
       - name: Install pnpm
         run: npm install -g pnpm
@@ -48,7 +48,10 @@ jobs:
         run: pnpm install
       
       - name: Static HTML export with Nuxt
-        run: pnpm run generate
+        run: pnpm run generate:verbose
+        env:
+          DEBUG: 'nuxt:*'
+          NODE_ENV: 'production'
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
