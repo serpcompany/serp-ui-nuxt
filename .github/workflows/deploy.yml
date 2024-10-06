@@ -20,21 +20,20 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
+      
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: pnpm
-
+          node-version: '20'
+      
       - name: Install pnpm
-        run: corepack enable pnpm # Use corepack to enable pnpm without global install
-
+        run: npm install -g pnpm
+      
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           static_site_generator: nuxt
-
+      
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -44,16 +43,13 @@ jobs:
           key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
           restore-keys: |
             ${{ runner.os }}-nuxt-build-
-
-      # Install dependencies using pnpm
+      
       - name: Install dependencies
         run: pnpm install
-
-      # Build and generate static HTML with Nuxt
+      
       - name: Static HTML export with Nuxt
         run: pnpm run generate
-
-      # Upload the generated static files for deployment
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
