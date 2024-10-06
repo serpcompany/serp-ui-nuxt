@@ -24,6 +24,11 @@ export default defineNuxtConfig({
       ],
     },
   },
+  nitro: {
+    prerender: {
+      ignore: ['/block-renderer']
+    }
+  },
 
   modules: [
     "@vueuse/nuxt",
