@@ -26,8 +26,8 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      ignore: ['/block-renderer']
-    }
+      ignore: ["/block-renderer"],
+    },
   },
 
   modules: [
@@ -125,7 +125,7 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    "/": { redirect: "/getting-started/introduction" },
+    // "/": { redirect: "/getting-started/introduction" },
   },
 
   colorMode: { classSuffix: "" },

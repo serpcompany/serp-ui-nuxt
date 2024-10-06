@@ -1,4 +1,4 @@
-npm run format && npm run lint:fix
+# npm run format && npm run lint:fix
 
-# Add this to test the code before commiting
-# exit 1
+# # Add this to test the code before commiting
+# # exit 1
