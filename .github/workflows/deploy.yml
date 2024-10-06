@@ -27,9 +27,8 @@ jobs:
           node-version: "20"
           cache: pnpm
 
-      # Install pnpm globally
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: corepack enable pnpm # Use corepack to enable pnpm without global install
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
