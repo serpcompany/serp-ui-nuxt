@@ -1,10 +1,6 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 echo "Running pre-commit hook..."
-
 # Check staged files
 echo "Staged files: $(git diff --cached --name-only)"
-
 # Run lint-staged
 pnpm lint-staged
