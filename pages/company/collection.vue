@@ -63,13 +63,14 @@
       <!-- tag -->
 
       <!-- article section -->
-      <section />
+      <section>
+        <!-- article -->
+        <article />
 
-      <!-- article -->
-      <article />
-      <!-- faqs -->
-      <section />
-      <!-- faq -->
+        <!-- faqs -->
+
+        <!-- faq -->
+      </section>
     </main>
   </div>
 </template>
@@ -192,7 +193,7 @@ const companies = [
     image: 'https://via.placeholder.com/150',
     website: 'https://www.techinnovate.com',
     description:
-      'TechInnovate Solutions is at the forefront of software development innovation. Our AI-powered tools streamline the development process, enhance code quality, and significantly reduce time-to-market for software projects.',
+      'Stupid Solutions is at the forefront of software development innovation. Our AI-powered tools streamline the development process, enhance code quality, and significantly reduce time-to-market for software projects.',
     rating: 4.7,
     reviews: 230,
     pros: [
@@ -279,6 +280,27 @@ const companies = [
     ],
     overview:
       'HealthTech Dynamics is at the forefront of the digital health revolution. Their comprehensive suite of solutions addresses many of the current challenges in healthcare delivery, from accessibility issues to the need for more personalized care.',
+  },
+];
+
+const faqs = [
+  {
+    id: 1,
+    question: 'What is an email marketing tool?',
+    answer:
+      'An email marketing tool is a software application that allows businesses to create, send, and track email campaigns to their target audience. These tools typically offer features such as email templates, list management, automation, and analytics to help businesses optimize their email marketing efforts.',
+  },
+  {
+    id: 2,
+    question: 'Is email still an effective marketing tool?',
+    answer:
+      'Yes, email marketing remains one of the most effective digital marketing channels for businesses. It offers a high return on investment (ROI), allows for personalized communication with customers, and can be used to drive engagement and conversions. With the right strategy and tools, businesses can leverage email marketing to reach their target audience and achieve their marketing goals.',
+  },
+  {
+    id: 3,
+    question: 'Which industry needs email marketing the most?',
+    answer:
+      'Email marketing can be beneficial for businesses in a wide range of industries, including e-commerce, retail, B2B services, and more. Any business that wants to communicate with its customers, build brand awareness, drive traffic to its website, or generate leads can benefit from email marketing. By creating targeted and engaging email campaigns, businesses can connect with their audience, nurture relationships, and drive conversions.',
   },
 ];
 </script>
