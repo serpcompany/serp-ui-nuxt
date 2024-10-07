@@ -6,9 +6,9 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "husky:prepare": "husky install",
     "postinstall": "husky install && nuxt prepare",
     "lint": "eslint . --quiet && prettier . --check",
+    "prepare": "husky install",
     "preview": "nuxt preview"
   },
   "lint-staged": {
