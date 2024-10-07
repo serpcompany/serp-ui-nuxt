@@ -74,6 +74,7 @@
 // In your .vue file
 import ProductCard from '@/components/CompanyCard.vue';
 const unusedVar = "This should trigger an ESLint error.";
+const unusedVar = "This should trigger an ESLint error.";
 const tags = [
   {
     name: 'Email Marketing',
