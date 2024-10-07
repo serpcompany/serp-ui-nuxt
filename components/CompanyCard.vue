@@ -51,7 +51,7 @@
             :src="company.image"
             :alt="company.name"
             class="h-auto w-full max-w-xs object-cover"
-          >
+          />
         </div>
       </div>
 
@@ -162,7 +162,7 @@ const props = defineProps({
 });
 
 const isExpanded = ref(false);
-const votes = ref(props.company.votes || 0);
+const votes = props.company.votes || 0;
 
 const toggleExpanded = () => {
   isExpanded.value = !isExpanded.value;

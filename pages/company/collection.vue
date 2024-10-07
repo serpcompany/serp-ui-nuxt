@@ -10,7 +10,7 @@
       <section>
         <!-- card -->
         <div class="container py-10">
-          <ProductCard
+          <CompanyCard
             v-for="company in companies"
             :key="company.id"
             :company="company"
@@ -75,10 +75,7 @@
 </template>
 
 <script setup lang="ts">
-// In your .vue file
-import ProductCard from '@/components/CompanyCard.vue';
-const unusedVar = 'This should trigger an ESLint error.';
-const unusedVar = 'This should trigger an ESLint error.';
+import CompanyCard from '@/components/CompanyCard.vue';
 const tags = [
   {
     name: 'Email Marketing',
