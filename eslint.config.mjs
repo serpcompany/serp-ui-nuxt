@@ -11,5 +11,4 @@ export default withNuxt({
     'no-unused-vars': 'off',
     'prefer-const': 'warn',
   },
-
 });

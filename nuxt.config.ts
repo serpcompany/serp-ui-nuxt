@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@nuxt/eslint',],
+  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@nuxt/eslint'],
   shadcn: {
     /**
      * Prefix for all the imported component
