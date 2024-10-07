@@ -48,7 +48,7 @@
             <div v-for="tag in tags" :key="tag.slug" class="border-t">
               <NuxtLink 
                 :to="tag.slug" 
-                class="flex mt-2 font-medium"
+                class="flex mt-3 font-medium"
               >
                 {{ tag.name }}
               </NuxtLink>
