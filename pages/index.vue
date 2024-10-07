@@ -10,8 +10,3 @@
     </ul>
   </div>
 </template>
-
-<script setup lang="ts">
-/* eslint-disable-next-line no-console */
-console.log('This is a test log.');
-</script>
