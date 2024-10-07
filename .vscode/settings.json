@@ -11,7 +11,7 @@
   "html.format.wrapLineLength": 0,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "vetur.format.defaultFormatter.html": "none"
 }

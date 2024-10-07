@@ -40,7 +40,7 @@
         <div class="container mx-auto">
           <div class="pt-12">
             <div>
-              <span class="inline-block px-3 py-2 text-3xl font-bold">Related</span>
+              <span class="inline-block py-4 text-3xl font-bold">Related</span>
             </div>
           </div>
 
