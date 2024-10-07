@@ -2,7 +2,7 @@
 <template>
   <div class="container py-10">
     <!-- hero -->
-    <section/>
+    <section />
 
     <!-- main -->
     <main>
@@ -11,10 +11,9 @@
         <!-- card -->
         <div class="container py-10">
           <ProductCard
-            v-for="company in companies"
-            :key="company.id"
-            :company="company"
-          />
+                       v-for="company in companies"
+                       :key="company.id"
+                       :company="company" />
           <!-- card top -->
           <!-- card bottom -->
         </div>
@@ -24,26 +23,23 @@
       <section>
         <div class="container flex justify-center">
           <Pagination
-            v-slot="{ page }"
-            :total="100"
-            :sibling-count="1"
-            show-edges
-            :default-page="1"
-          >
+                      v-slot="{ page }"
+                      :total="100"
+                      :sibling-count="1"
+                      show-edges
+                      :default-page="1">
             <PaginationList v-slot="{ items }" class="flex items-center gap-1">
               <PaginationFirst />
               <PaginationPrev />
               <template v-for="(item, index) in items">
                 <PaginationListItem
-                  v-if="item.type === 'page'"
-                  :key="index"
-                  :value="item.value"
-                  as-child
-                >
+                                    v-if="item.type === 'page'"
+                                    :key="index"
+                                    :value="item.value"
+                                    as-child>
                   <Button
-                    class="h-10 w-10 p-0"
-                    :variant="item.value === page ? 'default' : 'outline'"
-                  >
+                          class="w-10 h-10 p-0"
+                          :variant="item.value === page ? 'default' : 'outline'">
                     {{ item.value }}
                   </Button>
                 </PaginationListItem>
@@ -63,19 +59,21 @@
       <!-- tag -->
 
       <!-- article section -->
-      <section/>
+      <section />
 
       <!-- article -->
-      <article/>
+      <article />
       <!-- faqs -->
-      <section/>
+      <section />
       <!-- faq -->
     </main>
   </div>
 </template>
 
 <script setup lang="ts">
+// In your .vue file
 import ProductCard from '@/components/CompanyCard.vue';
+const unusedVar = "This should trigger an ESLint error.";
 const tags = [
   {
     name: 'Email Marketing',

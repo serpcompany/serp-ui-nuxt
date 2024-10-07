@@ -12,4 +12,3 @@ export default withNuxt({
     'prefer-const': 'warn',
   },
 });
-
