@@ -4,8 +4,6 @@
 # Get the list of files that are staged for commit
 staged_files=$(git diff --cached --name-only)
 
-# Specify the folder to ignore
-ignored_folder="_shadcn-vue"
 
 # Run linting and formatting only on files not in the ignored folder
 for file in $staged_files; do

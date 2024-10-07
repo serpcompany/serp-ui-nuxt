@@ -11,5 +11,5 @@ export default withNuxt({
     'no-unused-vars': 'off',
     'prefer-const': 'warn',
   },
-  ignores: ['_shadcn-vue/**'],
+
 });
