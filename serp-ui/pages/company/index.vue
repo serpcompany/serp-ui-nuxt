@@ -1,7 +1,5 @@
 <template>
-  <div>
-    Company page
-  </div>
+  <div>Company page</div>
 </template>
 
-<script setup lang='ts'></script>
+<script setup lang="ts"></script>

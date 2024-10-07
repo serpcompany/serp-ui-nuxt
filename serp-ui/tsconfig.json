@@ -5,7 +5,7 @@
     "paths": {
       "@/components/*": ["./components/*"],
       "@/lib/*": ["./lib/*"],
-      "@/*": ["./*"]  // Added to ensure @ resolves to the root
+      "@/*": ["./*"] // Added to ensure @ resolves to the root
     }
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
