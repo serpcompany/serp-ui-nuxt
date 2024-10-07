@@ -4,11 +4,10 @@
 # Get the list of files that are staged for commit
 staged_files=$(git diff --cached --name-only)
 
-
 # Run linting and formatting only on files not in the ignored folder
 for file in $staged_files; do
   if [[ ! $file =~ $ignored_folder ]]; then
-    # Run your linting and formatting commands
+    # Run ESLint and Prettier on the file
     eslint --fix "$file" || exit 1
     prettier --write "$file" || exit 1
   fi
