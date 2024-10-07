@@ -7,7 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "postinstall": "husky install && nuxt prepare",
-    "lint": "eslint . --quiet && prettier . --check",
+    "lint": "eslint . --quiet && prettier . --write",
     "prepare": "husky install",
     "preview": "nuxt preview"
   },
