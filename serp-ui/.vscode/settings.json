@@ -1,0 +1,17 @@
+{
+  "[html]": {
+    "editor.formatOnSave": false,
+    "editor.autoIndent": "none"
+  },
+  "[vue]": {
+    "editor.formatOnSave": false
+  },
+  "html.format.enable": false,
+  "html.format.preserveNewLines": true,
+  "html.format.wrapLineLength": 0,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "vetur.format.defaultFormatter.html": "none"
+}
