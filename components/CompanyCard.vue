@@ -51,7 +51,7 @@
             :src="company.image"
             :alt="company.name"
             class="h-auto w-full max-w-xs object-cover"
-          />
+          >
         </div>
       </div>
 
