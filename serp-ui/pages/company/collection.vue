@@ -172,10 +172,11 @@ const companies = [
   {
     id: 1,
     name: 'Stupid Solutions',
+    slug: 'stupid-solutions',
     oneline: 'Revolutionizing software development with AI-powered tools.',
     image: 'https://via.placeholder.com/150',
     website: 'https://www.techinnovate.com',
-    description: 'TechInnovate Solutions is at the forefront of software development innovation. Our AI-powered tools streamline the development process, enhance code quality, and significantly reduce time-to-market for software projects. From startups to enterprise-level organizations, we provide cutting-edge solutions that drive efficiency and foster innovation.',
+    description: 'TechInnovate Solutions is at the forefront of software development innovation. Our AI-powered tools streamline the development process, enhance code quality, and significantly reduce time-to-market for software projects.',
     rating: 4.7,
     reviews: 230,
     pros: [
@@ -196,15 +197,16 @@ const companies = [
       "Integrated version control system",
       "Cloud-based development environment"
     ],
-    overview: "TechInnovate Solutions offers a revolutionary approach to software development. Our AI-powered platform not only accelerates the coding process but also enhances code quality and team collaboration. While the initial learning curve may be steep, the long-term benefits in terms of productivity and code quality are substantial. Ideal for forward-thinking development teams looking to stay ahead in the rapidly evolving tech landscape."
+    overview: "TechInnovate Solutions offers a revolutionary approach to software development. Our AI-powered platform not only accelerates the coding process but also enhances code quality and team collaboration. While the initial learning curve may be steep, the long-term benefits in terms of productivity and code quality are substantial."
   },
   {
     id: 2,
-    name: 'EcoTech Innovations',
+    name: 'Fart Cannon Firearms',
+    slug: 'stupid-solutions',
     oneline: 'Sustainable technology solutions for a greener future.',
     image: 'https://via.placeholder.com/150',
     website: 'https://www.ecotechinnovations.com',
-    description: 'EcoTech Innovations is dedicated to developing sustainable technology solutions that address environmental challenges. Our products range from energy-efficient smart home devices to large-scale renewable energy systems. We believe in harnessing the power of technology to create a more sustainable and eco-friendly world.',
+    description: 'EcoTech Innovations is dedicated to developing sustainable technology solutions that address environmental challenges. Our products range from energy-efficient smart home devices.',
     rating: 4.5,
     reviews: 180,
     pros: [
@@ -229,11 +231,12 @@ const companies = [
   },
   {
     id: 3,
-    name: 'HealthTech Dynamics',
+    name: 'Poop Launcher Warehouse',
+    slug: 'stupid-solutions',
     oneline: 'Transforming healthcare through innovative digital solutions.',
     image: 'https://via.placeholder.com/150',
     website: 'https://www.healthtechdynamics.com',
-    description: 'HealthTech Dynamics is revolutionizing the healthcare industry with its suite of digital health solutions. From telemedicine platforms to AI-powered diagnostic tools, were making healthcare more accessible, efficient, and personalized. Our mission is to improve patient outcomes and streamline healthcare delivery through cutting- edge technology.',
+    description: 'HealthTech Dynamics is revolutionizing the healthcare industry with its suite of digital health solutions. Our mission is to improve patient outcomes and streamline healthcare delivery through cutting-edge technology.',
     rating: 4.6,
     reviews: 210,
     pros: [
@@ -254,7 +257,7 @@ const companies = [
       "Remote patient monitoring systems",
       "Secure messaging between patients and healthcare providers"
     ],
-    overview: "HealthTech Dynamics is at the forefront of the digital health revolution. Their comprehensive suite of solutions addresses many of the current challenges in healthcare delivery, from accessibility issues to the need for more personalized care. While the transition to digital health platforms may present some initial challenges, the long-term benefits in terms of improved patient care and operational efficiency are significant. HealthTech Dynamics is well-positioned to play a crucial role in shaping the future of healthcare."
+    overview: "HealthTech Dynamics is at the forefront of the digital health revolution. Their comprehensive suite of solutions addresses many of the current challenges in healthcare delivery, from accessibility issues to the need for more personalized care."
   }
 ];
 
