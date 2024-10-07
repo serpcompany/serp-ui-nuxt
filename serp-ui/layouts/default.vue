@@ -3,5 +3,5 @@
     <Slot>
     </Slot>
   </div>
-  <NuxtPage/>
+  <NuxtPage />
 </template>

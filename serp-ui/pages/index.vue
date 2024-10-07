@@ -1,5 +1,12 @@
 <template>
-  <div>
-    <Button>This is a shadcn button</Button>
+  <div class="container py-10">
+    <ul>
+      <li>
+        <NuxtLink to="/company">/company</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/company/collection">/company/collection</NuxtLink>
+      </li>
+    </ul>
   </div>
 </template>
