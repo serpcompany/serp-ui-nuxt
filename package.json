@@ -15,8 +15,7 @@
     "**/*.{js,ts,vue}": [
       "eslint --fix",
       "prettier --write"
-    ],
-    "!_shadcn-vue/**/*": []
+    ]
   },
   "dependencies": {
     "@nuxt/eslint": "^0.5.7",
