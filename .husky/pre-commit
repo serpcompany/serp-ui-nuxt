@@ -1,28 +1,16 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "Running pre-commit hook..."  # Debugging line
-
-# Specify the folder to ignore
+# Define the ignored folder pattern
 ignored_folder="_shadcn-vue"
 
 # Get the list of files that are staged for commit
 staged_files=$(git diff --cached --name-only)
 
-# Echo the staged files for debugging
-echo "Staged files: $staged_files"
-
-# If there are no staged files, exit
-if [ -z "$staged_files" ]; then
-  echo "No staged files found. Exiting..."
-  exit 0
-fi
-
 # Run linting and formatting only on files not in the ignored folder
 for file in $staged_files; do
   if [[ ! $file =~ $ignored_folder ]]; then
-    # Run ESLint and Prettier on the file
-    echo "Linting file: $file"  # Debugging line
+    echo "Linting and formatting: $file"  # Log which file is being processed
     eslint --fix "$file" || exit 1
     prettier --write "$file" || exit 1
   fi
