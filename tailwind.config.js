@@ -1,6 +1,3 @@
-const animate = require('tailwindcss-animate');
-const tailwindTypography = require('@tailwindcss/typography');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
@@ -83,5 +80,5 @@ module.exports = {
       },
     },
   },
-  plugins: ['animate', tailwindTypography],
+  plugins: [require('@tailwindcss/typography'), require('tailwindcss-animate')],
 };
