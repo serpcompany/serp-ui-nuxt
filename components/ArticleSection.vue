@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-4 py-8">
+  <div class="container mx-auto">
     <article
       v-if="article"
       class="prose prose-sm max-w-none sm:prose lg:prose-lg xl:prose-xl"

@@ -63,10 +63,9 @@
       <!-- tag -->
 
       <!-- article section -->
-      <section>
+      <section class="mt-20">
         <!-- article -->
         <ArticleSection />
-
         <!-- faqs -->
 
         <!-- faq -->
