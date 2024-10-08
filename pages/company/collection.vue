@@ -2,7 +2,32 @@
 <template>
   <div class="container py-10">
     <!-- hero -->
-    <section />
+    <section>
+      <div class="py-24">
+        <div class="container">
+          <div class="items-center">
+            <div
+              class="flex flex-col items-center text-center lg:items-start lg:text-left"
+            >
+              <h1 class="my-6 text-pretty text-2xl font-bold lg:text-5xl">
+                The Best [Category Name] Tools
+              </h1>
+              <p class="mb-8 max-w-xl text-muted-foreground lg:text-xl">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <div
+                class="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start"
+              >
+                <Button class="w-full sm:w-auto">Primary Button</Button>
+                <Button variant="outline" class="w-full sm:w-auto">
+                  Buying Advice
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- main -->
     <main>
