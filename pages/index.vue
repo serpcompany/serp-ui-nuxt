@@ -7,6 +7,12 @@
       <li>
         <NuxtLink to="/company/collection">/company/collection</NuxtLink>
       </li>
+      <li>
+        <NuxtLink to="/multipage/multipage-static">/multipage-static</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/multipage/multipage">/multipage</NuxtLink>
+      </li>
     </ul>
   </div>
 </template>
