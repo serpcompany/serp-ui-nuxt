@@ -9,7 +9,7 @@
       <!-- section of cards -->
       <section>
         <!-- card -->
-        <div class="container py-10">
+        <div class="py-10">
           <CompanyCard
             v-for="company in companies"
             :key="company.id"
@@ -63,12 +63,38 @@
       <!-- tag -->
 
       <!-- article section -->
-      <section class="mt-20">
-        <!-- article -->
-        <ArticleSection />
-        <!-- faqs -->
+      <section>
+        <div class="mt-20">
+          <!-- article -->
+          <ArticleSection />
+        </div>
+      </section>
 
-        <!-- faq -->
+      <section>
+        <div class="prose mt-20 max-w-none">
+          <!-- faqs -->
+          <h2 class="my-5 text-4xl font-bold text-black">
+            Frequently Asked Questions
+          </h2>
+          <div class="w-full max-w-none">
+            <Accordion type="single" collapsible>
+              <AccordionItem
+                v-for="faq in faqs"
+                :key="faq.id"
+                :value="faq.id"
+                class="w-full"
+              >
+                <AccordionTrigger
+                  class="flex items-center justify-between text-xl"
+                  >{{ faq.question }}</AccordionTrigger
+                >
+                <AccordionContent class="text-lg">{{
+                  faq.answer
+                }}</AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
       </section>
     </main>
   </div>
