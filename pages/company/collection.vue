@@ -65,7 +65,7 @@
       <!-- article section -->
       <section>
         <!-- article -->
-        <article />
+        <ArticleSection />
 
         <!-- faqs -->
 
