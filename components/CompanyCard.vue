@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-4 bg-gray-100 p-4 shadow-sm">
+  <div class="mb-4 border p-4">
     <!-- card top half -->
     <div class="flex flex-col items-start md:flex-row">
       <!-- col 1 -->
@@ -60,7 +60,7 @@
         <div
           class="mb-2 flex flex-col items-start justify-between md:mb-0 md:flex-row md:items-center"
         >
-          <div class="mb-2 md:mb-0">
+          <div class="mb-2 text-black md:mb-0">
             <!-- company name -->
             <NuxtLink :to="company.slug">
               <h2 class="text-xl font-bold">{{ company.name }}</h2>
@@ -70,7 +70,10 @@
             <p class="my-2 text-sm text-gray-700">{{ company.description }}</p>
 
             <!--  read more -->
-            <button class="flex items-center text-sm" @click="toggleExpanded">
+            <button
+              class="mt-2 flex items-center text-sm"
+              @click="toggleExpanded"
+            >
               {{ isExpanded ? 'Read less' : 'Read more' }}
               <svg
                 :class="{ 'rotate-180 transform': isExpanded }"
@@ -97,7 +100,7 @@
         class="flex h-full w-full flex-col items-center justify-between space-y-4 md:w-auto"
       >
         <!-- view website button -->
-        <Button class="flex-1">
+        <Button class="flex-1 text-white">
           <a
             :href="company.website"
             target="_blank"
@@ -116,21 +119,21 @@
 
     <!-- card bottom half -->
     <div v-if="isExpanded" class="my-10">
-      <div class="mb-4 border-b border-t py-4">
+      <div class="border-t py-8">
         <p class="text-sm text-gray-700">{{ company.overview }}</p>
       </div>
 
       <!-- pros & cons -->
-      <div class="mb-4 border-b pb-4">
+      <div class="mb-8 border-b pb-8 text-black">
         <div class="flex flex-col md:flex-row">
           <div class="mb-4 w-full md:mb-0 md:w-1/2 md:pr-4">
-            <h3 class="mb-2 text-lg font-bold">Pros</h3>
+            <h3 class="mb-4 text-lg font-bold text-black">Pros</h3>
             <ul class="list-disc pl-5 text-sm text-gray-700">
               <li v-for="pro in company.pros" :key="pro">{{ pro }}</li>
             </ul>
           </div>
           <div class="w-full md:w-1/2">
-            <h3 class="mb-2 text-lg font-bold">Cons</h3>
+            <h3 class="mb-4 text-lg font-bold text-black">Cons</h3>
             <ul class="list-disc pl-5 text-sm text-gray-700">
               <li v-for="con in company.cons" :key="con">{{ con }}</li>
             </ul>
@@ -140,7 +143,7 @@
 
       <!-- features-->
       <div>
-        <h3 class="mb-2 text-lg font-bold">Features</h3>
+        <h3 class="pb-4 text-lg font-bold text-black">Features</h3>
         <ul class="list-disc pl-5 text-sm text-gray-700">
           <li v-for="feature in company.features" :key="feature">
             {{ feature }}

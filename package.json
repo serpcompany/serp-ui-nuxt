@@ -22,6 +22,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.447.0",
+    "marked": "^14.1.2",
     "nuxt": "^3.13.0",
     "radix-vue": "^1.9.6",
     "shadcn-nuxt": "^0.10.4",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "@tailwindcss/typography": "^0.5.15",
     "@typescript-eslint/eslint-plugin": "^8.8.0",
     "@typescript-eslint/parser": "^8.8.0",
     "eslint": "^9.12.0",

@@ -9,7 +9,7 @@
       <!-- section of cards -->
       <section>
         <!-- card -->
-        <div class="container py-10">
+        <div class="py-10">
           <CompanyCard
             v-for="company in companies"
             :key="company.id"
@@ -63,13 +63,39 @@
       <!-- tag -->
 
       <!-- article section -->
-      <section />
+      <section>
+        <div class="mt-20">
+          <!-- article -->
+          <ArticleSection />
+        </div>
+      </section>
 
-      <!-- article -->
-      <article />
-      <!-- faqs -->
-      <section />
-      <!-- faq -->
+      <section>
+        <div class="prose mt-20 max-w-none">
+          <!-- faqs -->
+          <h2 class="my-5 text-4xl font-bold text-black">
+            Frequently Asked Questions
+          </h2>
+          <div class="w-full max-w-none">
+            <Accordion type="single" collapsible>
+              <AccordionItem
+                v-for="faq in faqs"
+                :key="faq.id"
+                :value="faq.id"
+                class="w-full"
+              >
+                <AccordionTrigger
+                  class="flex items-center justify-between text-xl"
+                  >{{ faq.question }}</AccordionTrigger
+                >
+                <AccordionContent class="text-lg">{{
+                  faq.answer
+                }}</AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 </template>
@@ -192,7 +218,7 @@ const companies = [
     image: 'https://via.placeholder.com/150',
     website: 'https://www.techinnovate.com',
     description:
-      'TechInnovate Solutions is at the forefront of software development innovation. Our AI-powered tools streamline the development process, enhance code quality, and significantly reduce time-to-market for software projects.',
+      'Stupid Solutions is at the forefront of software development innovation. Our AI-powered tools streamline the development process, enhance code quality, and significantly reduce time-to-market for software projects.',
     rating: 4.7,
     reviews: 230,
     pros: [
@@ -214,7 +240,7 @@ const companies = [
       'Cloud-based development environment',
     ],
     overview:
-      'TechInnovate Solutions offers a revolutionary approach to software development. Our AI-powered platform not only accelerates the coding process but also enhances code quality and team collaboration. While the initial learning curve may be steep, the long-term benefits in terms of productivity and code quality are substantial.',
+      'TechInnovate Solutions offers a revolutionary approach to software development. Our AI-powered platform not only accelerates the coding process but also enhances code quality and team collaboration. While the initial learning curve may be steep, the long-term benefits in terms of productivity and code quality are substantial. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
   },
   {
     id: 2,
@@ -278,7 +304,28 @@ const companies = [
       'Secure messaging between patients and healthcare providers',
     ],
     overview:
-      'HealthTech Dynamics is at the forefront of the digital health revolution. Their comprehensive suite of solutions addresses many of the current challenges in healthcare delivery, from accessibility issues to the need for more personalized care.',
+      'HealthTech Dynamics is at the forefront of the digital health revolution. Their comprehensive suite of solutions addresses many of the current challenges in healthcare delivery, from accessibility issues to the need for more personalized care. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
+  },
+];
+
+const faqs = [
+  {
+    id: 1,
+    question: 'What is an email marketing tool?',
+    answer:
+      'An email marketing tool is a software application that allows businesses to create, send, and track email campaigns to their target audience. These tools typically offer features such as email templates, list management, automation, and analytics to help businesses optimize their email marketing efforts.',
+  },
+  {
+    id: 2,
+    question: 'Is email still an effective marketing tool?',
+    answer:
+      'Yes, email marketing remains one of the most effective digital marketing channels for businesses. It offers a high return on investment (ROI), allows for personalized communication with customers, and can be used to drive engagement and conversions. With the right strategy and tools, businesses can leverage email marketing to reach their target audience and achieve their marketing goals.',
+  },
+  {
+    id: 3,
+    question: 'Which industry needs email marketing the most?',
+    answer:
+      'Email marketing can be beneficial for businesses in a wide range of industries, including e-commerce, retail, B2B services, and more. Any business that wants to communicate with its customers, build brand awareness, drive traffic to its website, or generate leads can benefit from email marketing. By creating targeted and engaging email campaigns, businesses can connect with their audience, nurture relationships, and drive conversions.',
   },
 ];
 </script>
