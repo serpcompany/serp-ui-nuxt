@@ -7,17 +7,18 @@
       class="sticky top-0 z-10 bg-background transition-all duration-300"
     />
 
-    <main class="mx-auto max-w-4xl px-4 py-8">
+    <main class="mx-auto max-w-4xl px-4 pb-20">
       <section
         v-for="section in sections"
         :id="section.toLowerCase()"
         :key="section"
-        class="mb-12"
+        class="mb-20"
       >
-        <h2 class="mb-4 text-2xl font-semibold text-primary">
-          {{ section }}
-        </h2>
+        <!-- overview -->
         <div v-if="section === 'Overview'">
+          <div>
+            <h2 class="my-5 text-4xl font-bold text-black">{{ section }}</h2>
+          </div>
           <p
             v-for="(paragraph, index) in company.overview"
             :key="index"
@@ -26,47 +27,52 @@
             {{ paragraph }}
           </p>
         </div>
-        <div
-          v-else-if="section === 'Pricing'"
-          class="grid gap-6 md:grid-cols-3"
-        >
-          <div
-            v-for="plan in company.pricing"
-            :key="plan.name"
-            class="rounded-lg border bg-card p-6"
-          >
-            <h3 class="mb-2 text-xl font-semibold text-primary">
-              {{ plan.name }}
-            </h3>
-            <p class="mb-4 text-2xl font-bold text-primary">
-              ${{ plan.price }}/mo
-            </p>
-            <ul class="space-y-2">
-              <li
-                v-for="feature in plan.features"
-                :key="feature"
-                class="flex items-center"
-              >
-                <svg
-                  class="mr-2 h-4 w-4 text-green-500"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+
+        <!-- pricing -->
+        <div v-else-if="section === 'Pricing'">
+          <h2 class="my-5 text-4xl font-bold text-black">{{ section }}</h2>
+          <div class="grid gap-6 md:grid-cols-3">
+            <div
+              v-for="plan in company.pricing"
+              :key="plan.name"
+              class="rounded-lg border bg-card p-6"
+            >
+              <h3 class="mb-2 text-xl font-semibold text-primary">
+                {{ plan.name }}
+              </h3>
+              <p class="mb-4 text-2xl font-bold text-primary">
+                ${{ plan.price }}/mo
+              </p>
+              <ul class="space-y-2">
+                <li
+                  v-for="feature in plan.features"
+                  :key="feature"
+                  class="flex items-center"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                {{ feature }}
-              </li>
-            </ul>
+                  <svg
+                    class="mr-2 h-4 w-4 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  {{ feature }}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div v-else-if="section === 'Features'">
+
+        <!-- features -->
+        <div v-else-if="section === 'Features'" id="features">
+          <h2 class="my-5 text-4xl font-bold text-black">{{ section }}</h2>
           <ul class="space-y-2">
             <li
               v-for="feature in company.features"
@@ -93,7 +99,8 @@
         </div>
 
         <!-- reviews -->
-        <div v-else-if="section === 'Reviews'" class="space-y-6">
+        <div v-else-if="section === 'Reviews'" id="reviews" class="space-y-6">
+          <h2 class="my-5 text-4xl font-bold text-black">{{ section }}</h2>
           <div
             v-for="review in company.reviews"
             :key="review.author"
@@ -106,12 +113,14 @@
           </div>
         </div>
 
+        <!-- faqs -->
         <section v-else-if="section === 'FAQ'">
-          <FaqSection :faqs="company.faqs" />
+          <FaqSection id="faq" :faqs="company.faqs" />
         </section>
 
         <!-- alternatives -->
-        <div v-else-if="section === 'Alternatives'">
+        <div v-else-if="section === 'Alternatives'" id="alternatives">
+          <h2 class="my-5 text-4xl font-bold text-black">{{ section }}</h2>
           <ul class="space-y-2">
             <li
               v-for="alternative in company.alternatives"
