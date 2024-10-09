@@ -3,7 +3,9 @@
     <div class="mx-auto">
       <div class="pt-12">
         <div>
-          <span class="inline-block py-4 text-3xl font-bold">Related</span>
+          <span class="inline-block py-4 text-3xl font-bold">{{
+            headline
+          }}</span>
         </div>
       </div>
 
@@ -25,6 +27,10 @@ defineProps({
   tags: {
     type: Array,
     required: true,
+  },
+  headline: {
+    type: String,
+    default: null,
   },
 });
 </script>

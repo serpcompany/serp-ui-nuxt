@@ -13,17 +13,14 @@
 
     <!-- main -->
     <main>
-      <!-- section of cards -->
+      <!-- rows -->
       <section>
-        <!-- card -->
         <div class="py-10">
           <CompanyCard
             v-for="company in companies"
             :key="company.id"
             :company="company"
           />
-          <!-- card top -->
-          <!-- card bottom -->
         </div>
       </section>
 
@@ -65,9 +62,8 @@
 
       <!-- link hub -->
       <section>
-        <LinkHub :tags="tags" />
+        <LinkHub :tags="tags" headline="Related" />
       </section>
-      <!-- tag -->
 
       <!-- article section -->
       <section>
@@ -110,6 +106,7 @@
 <script setup lang="ts">
 import CompanyCard from '@/components/CompanyCard.vue';
 import HeroSection from '@/components/HeroSection.vue';
+
 const tags = [
   {
     name: 'Email Marketing',
