@@ -3,7 +3,7 @@
   <div class="container py-10">
     <!-- hero -->
     <section>
-      <HeroSection
+      <hero-section
         headline="Find the Best Software Companies 💩"
         subheadline="Discover top-rated software companies and tools for your business."
         :show-search-bar="true"
@@ -61,22 +61,18 @@
       </section>
 
       <!-- link hub -->
-      <section>
-        <LinkHub :tags="tags" headline="Related" />
-      </section>
+      <link-hub :tags="tags" headline="Related" />
 
       <!-- article section -->
       <section>
         <div class="mt-20">
           <!-- article -->
-          <ArticleSection />
+          <article-section />
         </div>
       </section>
 
       <!-- faqs -->
-      <section>
-        <FaqSection :faqs="faqs" />
-      </section>
+      <faq-section :faqs="faqs" />
     </main>
   </div>
 </template>

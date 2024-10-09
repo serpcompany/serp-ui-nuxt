@@ -23,7 +23,6 @@
             :key="section"
             :href="'#' + section.toLowerCase()"
             class="py-2 text-muted-foreground transition-colors duration-200 hover:text-primary"
-            @click.prevent="scrollToSection(section.toLowerCase())"
           >
             {{ section }}
           </a>
@@ -42,11 +41,7 @@ const props = defineProps({
     required: true,
   },
   sections: {
-    type: Array,
-    required: true,
-  },
-  scrollToSection: {
-    type: Function,
+    type: Array as () => string[],
     required: true,
   },
 });

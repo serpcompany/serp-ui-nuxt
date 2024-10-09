@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <div class="mx-auto">
       <div class="pt-12">
         <div>
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">

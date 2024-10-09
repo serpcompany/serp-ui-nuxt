@@ -1,7 +1,7 @@
 {
   "[html]": {
     "editor.formatOnSave": true,
-    "editor.autoIndent": "none"
+    "editor.autoIndent": "full"
   },
   "[vue]": {
     "editor.formatOnSave": true,

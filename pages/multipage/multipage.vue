@@ -1,13 +1,13 @@
 <template>
   <div class="min-h-screen bg-background text-foreground">
-    <MultipageHeader
+    <multipage-header
       :company="company"
       :sections="sections"
-      :scroll-to-section="scrollToSection"
       class="sticky top-0 z-10 bg-background transition-all duration-300"
     />
 
     <main class="mx-auto max-w-4xl px-4 pb-20">
+      <!-- create a dynamic section for each item in the sections array. -->
       <section
         v-for="section in sections"
         :id="section.toLowerCase()"
@@ -15,103 +15,36 @@
         class="mb-20"
       >
         <!-- overview -->
-        <div v-if="section === 'Overview'">
-          <div>
-            <h2 class="my-5 text-4xl font-bold text-black">{{ section }}</h2>
-          </div>
-          <p
-            v-for="(paragraph, index) in company.overview"
-            :key="index"
-            class="mb-4 text-muted-foreground"
-          >
-            {{ paragraph }}
-          </p>
-        </div>
+        <company-overview
+          v-if="section === 'Overview'"
+          id="overview"
+          :section="section"
+          :company="company"
+        />
 
         <!-- pricing -->
-        <div v-else-if="section === 'Pricing'">
-          <h2 class="my-5 text-4xl font-bold text-black">{{ section }}</h2>
-          <div class="grid gap-6 md:grid-cols-3">
-            <div
-              v-for="plan in company.pricing"
-              :key="plan.name"
-              class="rounded-lg border bg-card p-6"
-            >
-              <h3 class="mb-2 text-xl font-semibold text-primary">
-                {{ plan.name }}
-              </h3>
-              <p class="mb-4 text-2xl font-bold text-primary">
-                ${{ plan.price }}/mo
-              </p>
-              <ul class="space-y-2">
-                <li
-                  v-for="feature in plan.features"
-                  :key="feature"
-                  class="flex items-center"
-                >
-                  <svg
-                    class="mr-2 h-4 w-4 text-green-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  {{ feature }}
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <company-pricing
+          v-else-if="section === 'Pricing'"
+          id="pricing"
+          :section="section"
+          :company="company"
+        />
 
         <!-- features -->
-        <div v-else-if="section === 'Features'" id="features">
-          <h2 class="my-5 text-4xl font-bold text-black">{{ section }}</h2>
-          <ul class="space-y-2">
-            <li
-              v-for="feature in company.features"
-              :key="feature"
-              class="flex items-start"
-            >
-              <svg
-                class="mr-2 h-6 w-6 text-primary"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              <span>{{ feature }}</span>
-            </li>
-          </ul>
-        </div>
+        <company-features
+          v-else-if="section === 'Features'"
+          id="features"
+          :section="section"
+          :company="company"
+        />
 
         <!-- reviews -->
-        <div v-else-if="section === 'Reviews'" id="reviews" class="space-y-6">
-          <h2 class="my-5 text-4xl font-bold text-black">{{ section }}</h2>
-          <div
-            v-for="review in company.reviews"
-            :key="review.author"
-            class="rounded-lg border bg-card p-6"
-          >
-            <p class="mb-4 italic text-muted-foreground">
-              "{{ review.content }}"
-            </p>
-            <p class="text-right font-medium">- {{ review.author }}</p>
-          </div>
-        </div>
+        <company-reviews
+          v-else-if="section === 'Reviews'"
+          id="reviews"
+          :section="section"
+          :company="company"
+        />
 
         <!-- faqs -->
         <FaqSection
@@ -121,39 +54,18 @@
         />
 
         <!-- alternatives -->
-        <div v-else-if="section === 'Alternatives'" id="alternatives">
-          <h2 class="my-5 text-4xl font-bold text-black">{{ section }}</h2>
-          <ul class="space-y-2">
-            <li
-              v-for="alternative in company.alternatives"
-              :key="alternative"
-              class="flex items-start"
-            >
-              <svg
-                class="mr-2 h-6 w-6 text-primary"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
-              <span>{{ alternative }}</span>
-            </li>
-          </ul>
-        </div>
+        <company-alternatives
+          v-else-if="section === 'Alternatives'"
+          id="alternatives"
+          :section="section"
+          :company="company"
+        />
       </section>
     </main>
   </div>
 </template>
 
 <script setup>
-import MultipageHeader from '@/components/MultipageHeader.vue';
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const sections = [
@@ -205,16 +117,19 @@ const company = ref({
   ],
   reviews: [
     {
+      id: 1,
       author: 'John Doe',
       content:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.',
     },
     {
+      id: 2,
       author: 'Jane Smith',
       content:
         'Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.',
     },
     {
+      id: 3,
       author: 'Bob Johnson',
       content:
         'Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.',
@@ -247,16 +162,114 @@ const company = ref({
   ],
 });
 
-const header = ref(null);
+const companies = [
+  {
+    id: 1,
+    name: 'Stupid Solutions',
+    slug: 'stupid-solutions',
+    oneline: 'Revolutionizing software development with AI-powered tools.',
+    image: 'https://via.placeholder.com/150',
+    website: 'https://www.techinnovate.com',
+    description:
+      'Stupid Solutions is at the forefront of software development innovation. Our AI-powered tools streamline the development process, enhance code quality, and significantly reduce time-to-market for software projects.',
+    rating: 4.7,
+    reviews: 230,
+    pros: [
+      'Advanced AI-powered development tools',
+      'Significant reduction in development time',
+      'Comprehensive suite of integrated tools',
+      'Excellent customer support',
+    ],
+    cons: [
+      'Steep learning curve for new users',
+      'Higher price point compared to traditional tools',
+      'Requires consistent internet connection',
+    ],
+    features: [
+      'AI-assisted code completion and refactoring',
+      'Automated bug detection and fixing',
+      'Real-time collaboration tools',
+      'Integrated version control system',
+      'Cloud-based development environment',
+    ],
+    overview:
+      'TechInnovate Solutions offers a revolutionary approach to software development. Our AI-powered platform not only accelerates the coding process but also enhances code quality and team collaboration. While the initial learning curve may be steep, the long-term benefits in terms of productivity and code quality are substantial. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
+  },
+  {
+    id: 2,
+    name: 'Fart Cannon Firearms',
+    slug: 'stupid-solutions',
+    oneline: 'Sustainable technology solutions for a greener future.',
+    image: 'https://via.placeholder.com/150',
+    website: 'https://www.ecotechinnovations.com',
+    description:
+      'EcoTech Innovations is dedicated to developing sustainable technology solutions that address environmental challenges. Our products range from energy-efficient smart home devices.',
+    rating: 4.5,
+    reviews: 180,
+    pros: [
+      'Eco-friendly and sustainable products',
+      'Innovative and cutting-edge technology',
+      'Significant energy savings for users',
+      'Strong commitment to environmental causes',
+    ],
+    cons: [
+      'Higher initial cost compared to conventional alternatives',
+      'Limited product range',
+      'Some products require professional installation',
+    ],
+    features: [
+      'Smart home energy management systems',
+      'Solar-powered IoT devices',
+      'AI-driven energy optimization',
+      'Carbon footprint tracking and reporting',
+      'Integration with existing smart home ecosystems',
+    ],
+    overview:
+      "EcoTech Innovations is pioneering the integration of sustainability and technology. Their products offer tangible benefits in terms of energy savings and environmental impact. While the initial investment may be higher, the long-term savings and positive environmental impact make their solutions attractive to eco-conscious consumers and businesses. The company's commitment to sustainability extends beyond their products to their operations, making them a true leader in green technology.",
+  },
+  {
+    id: 3,
+    name: 'Poop Launcher Warehouse',
+    slug: 'stupid-solutions',
+    oneline: 'Transforming healthcare through innovative digital solutions.',
+    image: 'https://via.placeholder.com/150',
+    website: 'https://www.healthtechdynamics.com',
+    description:
+      'HealthTech Dynamics is revolutionizing the healthcare industry with its suite of digital health solutions. Our mission is to improve patient outcomes and streamline healthcare delivery through cutting-edge technology.',
+    rating: 4.6,
+    reviews: 210,
+    pros: [
+      'Comprehensive suite of digital health solutions',
+      'Improves accessibility to healthcare services',
+      'AI-powered diagnostics for faster and more accurate results',
+      'User-friendly interfaces for both patients and healthcare providers',
+    ],
+    cons: [
+      'Requires reliable internet connection for full functionality',
+      'Some features may have a learning curve for non-tech-savvy users',
+      'Initial setup and integration can be complex for healthcare providers',
+    ],
+    features: [
+      'Telemedicine platform with video consultations',
+      'AI-assisted diagnosis and treatment recommendations',
+      'Electronic Health Records (EHR) management',
+      'Remote patient monitoring systems',
+      'Secure messaging between patients and healthcare providers',
+    ],
+    overview:
+      'HealthTech Dynamics is at the forefront of the digital health revolution. Their comprehensive suite of solutions addresses many of the current challenges in healthcare delivery, from accessibility issues to the need for more personalized care. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
+  },
+];
+
 const isScrolled = ref(false);
 
-const scrollToSection = (sectionId) => {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-    history.pushState(null, '', `#${sectionId}`);
-  }
-};
+// const scrollToSection = (sectionId) => {
+//   const element = document.getElementById(sectionId);
+//   if (element) {
+//     element.scrollIntoView({ behavior: 'smooth' });
+//     history.pushState(null, '', `#${sectionId}`);
+//   }
+// };
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 0;
