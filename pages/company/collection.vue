@@ -73,9 +73,9 @@
         </div>
       </section>
 
+      <!-- faqs -->
       <section>
         <div class="prose mt-20 max-w-none">
-          <!-- faqs -->
           <h2 class="my-5 text-4xl font-bold text-black">
             Frequently Asked Questions
           </h2>
