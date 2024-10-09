@@ -82,9 +82,6 @@
 </template>
 
 <script setup lang="ts">
-import CompanyCard from '@/components/CompanyCard.vue';
-import HeroSection from '@/components/HeroSection.vue';
-
 const tags = [
   {
     name: 'Email Marketing',
