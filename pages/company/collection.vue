@@ -4,8 +4,10 @@
     <!-- hero -->
     <section>
       <HeroSection
-        headline="Find the Best Software Companies"
+        headline="Find the Best Software Companies 💩"
         subheadline="Discover top-rated software companies and tools for your business."
+        :show-search-bar="true"
+        :show-buttons="false"
       />
     </section>
 
