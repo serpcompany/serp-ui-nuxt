@@ -163,6 +163,10 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  showReadMore: {
+    type: Boolean,
+    default: true,
+  },
   showProsAndCons: {
     type: Boolean,
     default: true,

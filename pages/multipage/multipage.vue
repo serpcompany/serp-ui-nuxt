@@ -63,6 +63,7 @@
           :show-pros-and-cons="false"
           :show-features="false"
           :show-expanded-content="false"
+          :show-read-more="false"
         />
       </section>
     </main>
