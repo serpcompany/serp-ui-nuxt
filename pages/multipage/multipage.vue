@@ -1,36 +1,11 @@
 <template>
   <div class="min-h-screen bg-background text-foreground">
-    <header
-      ref="header"
+    <MultipageHeader
+      :company="company"
+      :sections="sections"
+      :scroll-to-section="scrollToSection"
       class="sticky top-0 z-10 bg-background transition-all duration-300"
-      :class="{ 'py-2': isScrolled, 'py-8': !isScrolled }"
-    >
-      <div class="mx-auto max-w-4xl px-4">
-        <h1
-          class="text-3xl font-bold text-primary transition-all duration-300"
-          :class="{ 'text-2xl': isScrolled }"
-        >
-          {{ company.name }}
-        </h1>
-        <p
-          class="text-sm text-muted-foreground transition-all duration-300"
-          :class="{ hidden: isScrolled }"
-        >
-          {{ company.oneliner }}
-        </p>
-        <nav class="mt-4 flex space-x-4 border-b border-border">
-          <a
-            v-for="section in sections"
-            :key="section"
-            :href="'#' + section.toLowerCase()"
-            class="py-2 text-muted-foreground transition-colors duration-200 hover:text-primary"
-            @click.prevent="scrollToSection(section.toLowerCase())"
-          >
-            {{ section }}
-          </a>
-        </nav>
-      </div>
-    </header>
+    />
 
     <main class="mx-auto max-w-4xl px-4 py-8">
       <section
@@ -169,6 +144,7 @@
 </template>
 
 <script setup>
+import MultipageHeader from '@/components/MultipageHeader.vue';
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const sections = [
@@ -266,6 +242,7 @@ const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId);
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' });
+    history.pushState(null, '', `#${sectionId}`);
   }
 };
 
