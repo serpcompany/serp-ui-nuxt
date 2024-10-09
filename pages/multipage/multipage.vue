@@ -91,6 +91,8 @@
             </li>
           </ul>
         </div>
+
+        <!-- reviews -->
         <div v-else-if="section === 'Reviews'" class="space-y-6">
           <div
             v-for="review in company.reviews"
@@ -103,16 +105,12 @@
             <p class="text-right font-medium">- {{ review.author }}</p>
           </div>
         </div>
-        <div v-else-if="section === 'FAQ'" class="space-y-6">
-          <div
-            v-for="item in company.faq"
-            :key="item.question"
-            class="border-b border-border pb-4"
-          >
-            <h3 class="mb-2 font-semibold text-primary">{{ item.question }}</h3>
-            <p class="text-muted-foreground">{{ item.answer }}</p>
-          </div>
-        </div>
+
+        <section v-else-if="section === 'FAQ'">
+          <FaqSection :faqs="company.faqs" />
+        </section>
+
+        <!-- alternatives -->
         <div v-else-if="section === 'Alternatives'">
           <ul class="space-y-2">
             <li
@@ -211,18 +209,21 @@ const company = ref({
         'Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.',
     },
   ],
-  faq: [
+  faqs: [
     {
+      id: 1,
       question: 'What is Lorem Ipsum?',
       answer:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.',
     },
     {
+      id: 2,
       question: 'Why do we use it?',
       answer:
         'Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.',
     },
     {
+      id: 3,
       question: 'Where does it come from?',
       answer:
         'Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.',
