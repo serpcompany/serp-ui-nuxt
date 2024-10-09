@@ -75,29 +75,7 @@
 
       <!-- faqs -->
       <section>
-        <div class="prose mt-20 max-w-none">
-          <h2 class="my-5 text-4xl font-bold text-black">
-            Frequently Asked Questions
-          </h2>
-          <div class="w-full max-w-none">
-            <Accordion type="single" collapsible>
-              <AccordionItem
-                v-for="faq in faqs"
-                :key="faq.id"
-                :value="faq.id"
-                class="w-full"
-              >
-                <AccordionTrigger
-                  class="flex items-center justify-between text-xl"
-                  >{{ faq.question }}</AccordionTrigger
-                >
-                <AccordionContent class="text-lg">{{
-                  faq.answer
-                }}</AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        </div>
+        <FaqSection :faqs="faqs" />
       </section>
     </main>
   </div>
