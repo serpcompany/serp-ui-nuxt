@@ -27,5 +27,5 @@ export interface Company {
     question: string;
     answer: string;
   }[];
-  alternatives: Company[];
+  alternatives: number[];
 }

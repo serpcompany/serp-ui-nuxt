@@ -1,0 +1,256 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "Stupid Solutions",
+      "slug": "stupid-solutions",
+      "oneliner": "Revolutionizing software development with AI-powered tools.",
+      "image": "https://via.placeholder.com/150",
+      "website": "https://www.techinnovate.com",
+      "description": "Stupid Solutions is at the forefront of software development innovation. Our AI-powered tools streamline the development process, enhance code quality, and significantly reduce time-to-market for software projects.",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "id": 1,
+          "author": "John Doe",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+          "id": 2,
+          "author": "Jane Smith",
+          "content": "Vivamus hendrerit arcu sed erat molestie vehicula."
+        }
+      ],
+      "pros": [
+        "Advanced AI-powered development tools",
+        "Significant reduction in development time",
+        "Comprehensive suite of integrated tools",
+        "Excellent customer support"
+      ],
+      "cons": [
+        "Steep learning curve for new users",
+        "Higher price point compared to traditional tools",
+        "Requires consistent internet connection"
+      ],
+      "features": [
+        "AI-assisted code completion and refactoring",
+        "Automated bug detection and fixing",
+        "Real-time collaboration tools",
+        "Integrated version control system",
+        "Cloud-based development environment"
+      ],
+      "overview": "Stupid Solutions offers a revolutionary approach to software development. Our AI-powered platform not only accelerates the coding process but also enhances code quality and team collaboration. While the initial learning curve may be steep, the long-term benefits in terms of productivity and code quality are substantial.",
+      "pricing": [
+        {
+          "name": "Basic",
+          "price": 9.99,
+          "features": ["Feature 1", "Feature 2", "Feature 3"]
+        },
+        {
+          "name": "Pro",
+          "price": 19.99,
+          "features": [
+            "All Basic features",
+            "Feature 4",
+            "Feature 5",
+            "Feature 6"
+          ]
+        },
+        {
+          "name": "Enterprise",
+          "price": 49.99,
+          "features": [
+            "All Pro features",
+            "Feature 7",
+            "Feature 8",
+            "Feature 9",
+            "Feature 10"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "id": 1,
+          "question": "Is Stupid Solutions a good company to work fow?",
+          "answer": "Our Enterprise plan offers custom integrations with most major hospital management systems."
+        },
+        {
+          "id": 2,
+          "question": "Why do we use Stupid Solutions?",
+          "answer": "Vivamus hendrerit arcu sed erat molestie vehicula."
+        }
+      ],
+      "alternatives": [2, 3]
+    },
+    {
+      "id": 2,
+      "name": "Fart Cannon Firearms",
+      "slug": "fart-cannon-firearms",
+      "oneliner": "Sustainable technology solutions for a greener future.",
+      "image": "https://via.placeholder.com/150",
+      "website": "https://www.ecotechinnovations.com",
+      "description": "Fart Cannon Firearms is dedicated to developing sustainable technology solutions that address environmental challenges. Our products range from energy-efficient smart home devices.",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "id": 1,
+          "author": "Alice Johnson",
+          "content": "Great products, really helping us reduce our carbon footprint!"
+        },
+        {
+          "id": 2,
+          "author": "Bob Williams",
+          "content": "Innovative solutions, but a bit pricey."
+        }
+      ],
+      "pros": [
+        "Eco-friendly and sustainable products",
+        "Innovative and cutting-edge technology",
+        "Significant energy savings for users",
+        "Strong commitment to environmental causes"
+      ],
+      "cons": [
+        "Higher initial cost compared to conventional alternatives",
+        "Limited product range",
+        "Some products require professional installation"
+      ],
+      "features": [
+        "Smart home energy management systems",
+        "Solar-powered IoT devices",
+        "AI-driven energy optimization",
+        "Carbon footprint tracking and reporting",
+        "Integration with existing smart home ecosystems"
+      ],
+      "overview": "Fart Cannon Firearms is pioneering the integration of sustainability and technology. Their products offer tangible benefits in terms of energy savings and environmental impact. While the initial investment may be higher, the long-term savings and positive environmental impact make their solutions attractive to eco-conscious consumers and businesses.",
+      "pricing": [
+        {
+          "name": "Starter",
+          "price": 199.99,
+          "features": [
+            "Basic energy monitoring",
+            "Smart thermostat control",
+            "Mobile app access"
+          ]
+        },
+        {
+          "name": "Advanced",
+          "price": 399.99,
+          "features": [
+            "All Starter features",
+            "Solar integration",
+            "AI-powered optimization",
+            "Extended warranty"
+          ]
+        },
+        {
+          "name": "Complete",
+          "price": 799.99,
+          "features": [
+            "All Advanced features",
+            "Professional installation",
+            "24/7 support",
+            "Custom energy plans"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "id": 1,
+          "question": "How much can I save on energy bills?",
+          "answer": "On average, our customers save 20-30% on their energy bills within the first year."
+        },
+        {
+          "id": 2,
+          "question": "Do I need special equipment to use your products?",
+          "answer": "Most of our products integrate with existing smart home systems, but some may require additional hardware."
+        }
+      ],
+      "alternatives": [1, 3]
+    },
+    {
+      "id": 3,
+      "name": "Poop Launcher Warehouse",
+      "slug": "poop-launcher-warehouse",
+      "oneliner": "Transforming healthcare through innovative digital solutions.",
+      "image": "https://via.placeholder.com/150",
+      "website": "https://www.healthtechdynamics.com",
+      "description": "Poop Launcher Warehouse is revolutionizing the healthcare industry with its suite of digital health solutions. Our mission is to improve patient outcomes and streamline healthcare delivery through cutting-edge technology.",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "id": 1,
+          "author": "Dr. Emily Chen",
+          "content": "This platform has significantly improved our patient care and efficiency."
+        },
+        {
+          "id": 2,
+          "author": "Mark Thompson",
+          "content": "As a patient, I love how easy it is to connect with my healthcare providers."
+        }
+      ],
+      "pros": [
+        "Comprehensive suite of digital health solutions",
+        "Improves accessibility to healthcare services",
+        "AI-powered diagnostics for faster and more accurate results",
+        "User-friendly interfaces for both patients and healthcare providers"
+      ],
+      "cons": [
+        "Requires reliable internet connection for full functionality",
+        "Some features may have a learning curve for non-tech-savvy users",
+        "Initial setup and integration can be complex for healthcare providers"
+      ],
+      "features": [
+        "Telemedicine platform with video consultations",
+        "AI-assisted diagnosis and treatment recommendations",
+        "Electronic Health Records (EHR) management",
+        "Remote patient monitoring systems",
+        "Secure messaging between patients and healthcare providers"
+      ],
+      "overview": "Poop Launcher Warehouse is at the forefront of the digital health revolution. Their comprehensive suite of solutions addresses many of the current challenges in healthcare delivery, from accessibility issues to the need for more personalized care.",
+      "pricing": [
+        {
+          "name": "Basic",
+          "price": 499.99,
+          "features": [
+            "Telemedicine platform",
+            "Basic EHR management",
+            "Secure messaging"
+          ]
+        },
+        {
+          "name": "Professional",
+          "price": 999.99,
+          "features": [
+            "All Basic features",
+            "AI-assisted diagnostics",
+            "Remote patient monitoring",
+            "Advanced analytics"
+          ]
+        },
+        {
+          "name": "Enterprise",
+          "price": 2499.99,
+          "features": [
+            "All Professional features",
+            "Custom integrations",
+            "Dedicated support team",
+            "Advanced security features"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "id": 1,
+          "question": "Is patient data secure on your platform?",
+          "answer": "Yes, we use state-of-the-art encryption and comply with all relevant healthcare data protection regulations."
+        },
+        {
+          "id": 2,
+          "question": "Can your system integrate with existing hospital software?",
+          "answer": "Our Enterprise plan offers custom integrations with most major hospital management systems."
+        }
+      ],
+      "alternatives": [1, 2]
+    }
+  ]
+}

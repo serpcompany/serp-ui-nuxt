@@ -3,12 +3,8 @@
     <div>
       <h2 class="my-5 text-4xl font-bold text-black">{{ section }}</h2>
     </div>
-    <p
-      v-for="(paragraph, index) in company.overview"
-      :key="index"
-      class="mb-4 text-muted-foreground"
-    >
-      {{ paragraph }}
+    <p class="mb-4 text-muted-foreground">
+      {{ company.overview }}
     </p>
   </section>
 </template>

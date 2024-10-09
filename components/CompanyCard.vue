@@ -71,6 +71,7 @@
 
             <!--  read more -->
             <button
+              v-if="showReadMore"
               class="mt-2 flex items-center text-sm"
               @click="toggleExpanded"
             >
@@ -118,13 +119,13 @@
     </div>
 
     <!-- card bottom half -->
-    <div v-if="isExpanded" class="my-10">
+    <div v-if="isExpanded && showExpandedContent" class="my-10">
       <div class="border-t py-8">
         <p class="text-sm text-gray-700">{{ company.overview }}</p>
       </div>
 
       <!-- pros & cons -->
-      <div class="mb-8 border-b pb-8 text-black">
+      <div v-if="showProsAndCons" class="mb-8 border-b pb-8 text-black">
         <div class="flex flex-col md:flex-row">
           <div class="mb-4 w-full md:mb-0 md:w-1/2 md:pr-4">
             <h3 class="mb-4 text-lg font-bold text-black">Pros</h3>
@@ -142,7 +143,7 @@
       </div>
 
       <!-- features-->
-      <div>
+      <div v-if="showFeatures">
         <h3 class="pb-4 text-lg font-bold text-black">Features</h3>
         <ul class="list-disc pl-5 text-sm text-gray-700">
           <li v-for="feature in company.features" :key="feature">
@@ -161,6 +162,18 @@ const props = defineProps({
   company: {
     type: Object,
     required: true,
+  },
+  showProsAndCons: {
+    type: Boolean,
+    default: true,
+  },
+  showFeatures: {
+    type: Boolean,
+    default: true,
+  },
+  showExpandedContent: {
+    type: Boolean,
+    default: true,
   },
 });
 
