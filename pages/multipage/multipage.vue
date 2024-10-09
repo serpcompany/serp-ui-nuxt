@@ -114,9 +114,11 @@
         </div>
 
         <!-- faqs -->
-        <section v-else-if="section === 'FAQ'">
-          <FaqSection id="faq" :faqs="company.faqs" />
-        </section>
+        <FaqSection
+          v-else-if="section === 'FAQ'"
+          id="faq"
+          :faqs="company.faqs"
+        />
 
         <!-- alternatives -->
         <div v-else-if="section === 'Alternatives'" id="alternatives">
