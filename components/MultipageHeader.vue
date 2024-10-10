@@ -1,6 +1,13 @@
 <template>
   <div>
-    <header ref="header" :class="{ 'py-2': isScrolled, 'py-8': !isScrolled }">
+    <header
+      ref="header"
+      :class="{
+        'py-2': isScrolled,
+        'py-8': !isScrolled,
+        'fixed left-0 top-0 z-50 w-full bg-white': isScrolled, // Added fixed position
+      }"
+    >
       <div class="mx-auto max-w-4xl px-4">
         <h1
           class="text-3xl font-bold text-primary transition-all duration-300"
