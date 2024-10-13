@@ -6,7 +6,7 @@
       class="sticky top-0 z-10 bg-background transition-all duration-300"
     />
 
-    <main class="mx-auto max-w-4xl px-4 pb-20">
+    <main class="mx-auto max-w-4xl pb-20">
       <!-- create a dynamic section for each item in the sections array. -->
       <section
         v-for="section in sections"
