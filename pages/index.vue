@@ -13,6 +13,9 @@
       <li>
         <NuxtLink to="/multipage/multipage">/multipage</NuxtLink>
       </li>
+      <li>
+        <NuxtLink to="/single-blog/demo-1">/singleblog-1</NuxtLink>
+      </li>
     </ul>
   </div>
 </template>
