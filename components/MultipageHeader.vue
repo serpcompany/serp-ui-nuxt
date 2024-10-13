@@ -5,7 +5,7 @@
       :class="{
         'py-2': isScrolled,
         'py-8': !isScrolled,
-        'fixed left-0 top-0 z-50 w-full bg-white': isScrolled, // Added fixed position
+        'fixed left-0 top-0 z-50 w-full bg-white': isScrolled,
       }"
     >
       <div class="mx-auto max-w-4xl px-4">
