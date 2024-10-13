@@ -14,7 +14,7 @@
         <NuxtLink to="/multipage/multipage">/multipage</NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/single-blog/demo-1">/singleblog-1</NuxtLink>
+        <NuxtLink to="/single-blog/blog-demo-1">/Blog Demo 1</NuxtLink>
       </li>
     </ul>
   </div>
