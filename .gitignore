@@ -24,4 +24,4 @@ logs
 !.env.example
 
 # personal settings
-*/copilot/*
+copilot-instructions.md
