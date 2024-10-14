@@ -5,20 +5,51 @@
       "name": "Stupid Solutions",
       "slug": "stupid-solutions",
       "oneliner": "Revolutionizing software development with AI-powered tools.",
-      "image": "https://via.placeholder.com/150",
+      "logo": "https://avatar.iran.liara.run/public/72",
       "website": "https://www.techinnovate.com",
+      "serplyLink": "https://serp.ly/example-link",
       "description": "Stupid Solutions is at the forefront of software development innovation. Our AI-powered tools streamline the development process, enhance code quality, and significantly reduce time-to-market for software projects.",
       "rating": 4.7,
       "reviews": [
         {
           "id": 1,
-          "author": "John Doe",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          "fullname": "John D",
+          "rating": 4.5,
+          "date": "2023-10-01",
+          "subject": "Ipsum eiusmod eu coloduem ai.",
+          "body": "The service was excellent and the staff was very friendly. Pariatur laboris irure irure tempor proident excepteur exercitation cupidatat. Do culpa tempor reprehenderit Lorem proident ea ullamco elit magna cupidatat est sint deserunt proident. Commodo magna incididunt quis voluptate veniam anim anim ipsum commodo reprehenderit tempor quis duis. Minim cupidatat nostrud laboris labore aliquip veniam reprehenderit ea voluptate adipisicing enim.",
+          "reviewSource": "Google",
+          "avatar": "https://avatar.iran.liara.run/public/76"
         },
         {
           "id": 2,
-          "author": "Jane Smith",
-          "content": "Vivamus hendrerit arcu sed erat molestie vehicula."
+          "fullname": "Jane S",
+          "rating": 3.8,
+          "date": "2023-09-15",
+          "subject": "Good Experience. Ipsum eiusmod eu coloduem ai.",
+          "body": "Overall, a good experience but there is room for improvement. Sunt non sit eiusmod sunt deserunt mollit adipisicing anim sint. Exercitation veniam sint pariatur nulla nulla anim pariatur aliqua amet ea tempor duis. Incididunt anim ad fugiat ex elit eu amet ex laboris.",
+          "reviewSource": "Yelp",
+          "avatar": "https://avatar.iran.liara.run/public/74"
+        },
+        {
+          "id": 3,
+          "fullname": "Alice J",
+          "rating": 5.0,
+          "date": "2023-08-20",
+          "subject": "Outstanding!",
+          "body": "Absolutely outstanding! Highly recommend to everyone. Id cillum laborum sit laborum voluptate cupidatat enim consequat reprehenderit adipisicing qui. Sit pariatur reprehenderit elit laboris consectetur. Eu minim quis excepteur fugiat deserunt sunt ea nisi Lorem. Ut tempor id anim magna consectetur. Fugiat non laborum enim minim commodo nostrud tempor adipisicing Lorem voluptate et labore. Eu officia officia est proident officia aliqua ipsum ea magna nisi ipsum.",
+          "reviewSource": "TripAdvisor",
+          "avatar": "https://avatar.iran.liara.run/public/35"
+        },
+        {
+          "id": 4,
+          "fullname": "Bob B",
+          "rating": 4.0,
+          "date": "2023-07-30",
+          "subject": "Very Satisfied",
+          "body": "Very satisfied with the service provided. Will come back again. Fugiat elit aliquip et sit ipsum excepteur est velit nulla. Ad velit occaecat officia velit proident elit labore dolore velit cupidatat. Minim consectetur aute tempor qui minim. Ipsum do consequat minim anim incididunt magna id laboris minim exercitation sunt laborum pariatur. Sit cillum elit do elit exercitation tempor excepteur enim sint. Culpa incididunt ut velit id excepteur duis deserunt minim. Lorem proident commodo culpa elit anim reprehenderit duis cillum adipisicing culpa sit amet commodo consectetur.",
+          "reviewSource": "Facebook",
+          "avatar": "https://avatar.iran.liara.run/public/89"
         }
       ],
       "pros": [
@@ -87,20 +118,51 @@
       "name": "Fart Cannon Firearms",
       "slug": "fart-cannon-firearms",
       "oneliner": "Sustainable technology solutions for a greener future.",
-      "image": "https://via.placeholder.com/150",
+      "logo": "https://avatar.iran.liara.run/public/76",
       "website": "https://www.ecotechinnovations.com",
+      "serplyLink": "https://serp.ly/example-link",
       "description": "Fart Cannon Firearms is dedicated to developing sustainable technology solutions that address environmental challenges. Our products range from energy-efficient smart home devices.",
       "rating": 4.5,
       "reviews": [
         {
           "id": 1,
-          "author": "Alice Johnson",
-          "content": "Great products, really helping us reduce our carbon footprint!"
+          "fullname": "John Doe",
+          "rating": 4.5,
+          "date": "2023-10-01",
+          "subject": "Ipsum eiusmod eu coloduem ai.",
+          "body": "The service was excellent and the staff was very friendly. Pariatur laboris irure irure tempor proident excepteur exercitation cupidatat. Do culpa tempor reprehenderit Lorem proident ea ullamco elit magna cupidatat est sint deserunt proident. Commodo magna incididunt quis voluptate veniam anim anim ipsum commodo reprehenderit tempor quis duis. Minim cupidatat nostrud laboris labore aliquip veniam reprehenderit ea voluptate adipisicing enim.",
+          "reviewSource": "Google",
+          "avatar": "https://avatar.iran.liara.run/public/76"
         },
         {
           "id": 2,
-          "author": "Bob Williams",
-          "content": "Innovative solutions, but a bit pricey."
+          "fullname": "Jane Smith",
+          "rating": 3.8,
+          "date": "2023-09-15",
+          "subject": "Good Experience. Ipsum eiusmod eu coloduem ai.",
+          "body": "Overall, a good experience but there is room for improvement. Sunt non sit eiusmod sunt deserunt mollit adipisicing anim sint. Exercitation veniam sint pariatur nulla nulla anim pariatur aliqua amet ea tempor duis. Incididunt anim ad fugiat ex elit eu amet ex laboris.",
+          "reviewSource": "Yelp",
+          "avatar": "https://avatar.iran.liara.run/public/74"
+        },
+        {
+          "id": 3,
+          "fullname": "Alice Johnson",
+          "rating": 5.0,
+          "date": "2023-08-20",
+          "subject": "Outstanding!",
+          "body": "Absolutely outstanding! Highly recommend to everyone. Id cillum laborum sit laborum voluptate cupidatat enim consequat reprehenderit adipisicing qui. Sit pariatur reprehenderit elit laboris consectetur. Eu minim quis excepteur fugiat deserunt sunt ea nisi Lorem. Ut tempor id anim magna consectetur. Fugiat non laborum enim minim commodo nostrud tempor adipisicing Lorem voluptate et labore. Eu officia officia est proident officia aliqua ipsum ea magna nisi ipsum.",
+          "reviewSource": "TripAdvisor",
+          "avatar": "https://avatar.iran.liara.run/public/35"
+        },
+        {
+          "id": 4,
+          "fullname": "Bob Brown",
+          "rating": 4.0,
+          "date": "2023-07-30",
+          "subject": "Very Satisfied",
+          "body": "Very satisfied with the service provided. Will come back again. Fugiat elit aliquip et sit ipsum excepteur est velit nulla. Ad velit occaecat officia velit proident elit labore dolore velit cupidatat. Minim consectetur aute tempor qui minim. Ipsum do consequat minim anim incididunt magna id laboris minim exercitation sunt laborum pariatur. Sit cillum elit do elit exercitation tempor excepteur enim sint. Culpa incididunt ut velit id excepteur duis deserunt minim. Lorem proident commodo culpa elit anim reprehenderit duis cillum adipisicing culpa sit amet commodo consectetur.",
+          "reviewSource": "Facebook",
+          "avatar": "https://avatar.iran.liara.run/public/89"
         }
       ],
       "pros": [
@@ -172,20 +234,51 @@
       "name": "Poop Launcher Warehouse",
       "slug": "poop-launcher-warehouse",
       "oneliner": "Transforming healthcare through innovative digital solutions.",
-      "image": "https://via.placeholder.com/150",
+      "logo": "https://avatar.iran.liara.run/public/75",
       "website": "https://www.healthtechdynamics.com",
+      "serplyLink": "https://serp.ly/example-link",
       "description": "Poop Launcher Warehouse is revolutionizing the healthcare industry with its suite of digital health solutions. Our mission is to improve patient outcomes and streamline healthcare delivery through cutting-edge technology.",
       "rating": 4.6,
       "reviews": [
         {
           "id": 1,
-          "author": "Dr. Emily Chen",
-          "content": "This platform has significantly improved our patient care and efficiency."
+          "fullname": "John Doe",
+          "rating": 4.5,
+          "date": "2023-10-01",
+          "subject": "Ipsum eiusmod eu coloduem ai.",
+          "body": "The service was excellent and the staff was very friendly. Pariatur laboris irure irure tempor proident excepteur exercitation cupidatat. Do culpa tempor reprehenderit Lorem proident ea ullamco elit magna cupidatat est sint deserunt proident. Commodo magna incididunt quis voluptate veniam anim anim ipsum commodo reprehenderit tempor quis duis. Minim cupidatat nostrud laboris labore aliquip veniam reprehenderit ea voluptate adipisicing enim.",
+          "reviewSource": "Google",
+          "avatar": "https://avatar.iran.liara.run/public/76"
         },
         {
           "id": 2,
-          "author": "Mark Thompson",
-          "content": "As a patient, I love how easy it is to connect with my healthcare providers."
+          "fullname": "Jane Smith",
+          "rating": 3.8,
+          "date": "2023-09-15",
+          "subject": "Good Experience. Ipsum eiusmod eu coloduem ai.",
+          "body": "Overall, a good experience but there is room for improvement. Sunt non sit eiusmod sunt deserunt mollit adipisicing anim sint. Exercitation veniam sint pariatur nulla nulla anim pariatur aliqua amet ea tempor duis. Incididunt anim ad fugiat ex elit eu amet ex laboris.",
+          "reviewSource": "Yelp",
+          "avatar": "https://avatar.iran.liara.run/public/74"
+        },
+        {
+          "id": 3,
+          "fullname": "Alice Johnson",
+          "rating": 5.0,
+          "date": "2023-08-20",
+          "subject": "Outstanding!",
+          "body": "Absolutely outstanding! Highly recommend to everyone. Id cillum laborum sit laborum voluptate cupidatat enim consequat reprehenderit adipisicing qui. Sit pariatur reprehenderit elit laboris consectetur. Eu minim quis excepteur fugiat deserunt sunt ea nisi Lorem. Ut tempor id anim magna consectetur. Fugiat non laborum enim minim commodo nostrud tempor adipisicing Lorem voluptate et labore. Eu officia officia est proident officia aliqua ipsum ea magna nisi ipsum.",
+          "reviewSource": "TripAdvisor",
+          "avatar": "https://avatar.iran.liara.run/public/35"
+        },
+        {
+          "id": 4,
+          "fullname": "Bob Brown",
+          "rating": 4.0,
+          "date": "2023-07-30",
+          "subject": "Very Satisfied",
+          "body": "Very satisfied with the service provided. Will come back again. Fugiat elit aliquip et sit ipsum excepteur est velit nulla. Ad velit occaecat officia velit proident elit labore dolore velit cupidatat. Minim consectetur aute tempor qui minim. Ipsum do consequat minim anim incididunt magna id laboris minim exercitation sunt laborum pariatur. Sit cillum elit do elit exercitation tempor excepteur enim sint. Culpa incididunt ut velit id excepteur duis deserunt minim. Lorem proident commodo culpa elit anim reprehenderit duis cillum adipisicing culpa sit amet commodo consectetur.",
+          "reviewSource": "Facebook",
+          "avatar": "https://avatar.iran.liara.run/public/89"
         }
       ],
       "pros": [

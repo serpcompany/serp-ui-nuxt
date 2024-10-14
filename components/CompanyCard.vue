@@ -45,12 +45,13 @@
           </div>
         </div>
 
-        <!-- image -->
+        <!-- company logo -->
         <div class="ml-4 flex-grow">
           <img
-            :src="company.image"
+            :src="company.logo"
             :alt="company.name"
-            class="h-auto w-full max-w-xs object-cover"
+            class="h-10 w-full max-w-xs"
+            loading="lazy"
           />
         </div>
       </div>
@@ -121,7 +122,7 @@
     <!-- card bottom half -->
     <div v-if="isExpanded && showExpandedContent" class="my-10">
       <div class="border-t py-8">
-        <p class="text-sm text-gray-700">{{ company.overview }}</p>
+        <p class="text-gray-700">{{ company.overview }}</p>
       </div>
 
       <!-- pros & cons -->

@@ -4,7 +4,7 @@ export interface Company {
   name: string;
   slug: string;
   oneliner: string;
-  image: string;
+  logo: string;
   website: string;
   description: string;
   rating: number;
@@ -28,4 +28,15 @@ export interface Company {
     answer: string;
   }[];
   alternatives: number[];
+}
+
+export interface Reviews {
+  id: number;
+  fullname: string;
+  rating: number;
+  date: string;
+  subject: string;
+  body: string;
+  reviewSource: string;
+  avatar: string;
 }
