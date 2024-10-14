@@ -20,7 +20,7 @@
         <NuxtLink to="/company/collection">Collection</NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/multipage/multipage">Single - Multipage</NuxtLink>
+        <NuxtLink to="/company/multipage">Single - Multipage</NuxtLink>
       </li>
     </ul>
   </div>

@@ -13,7 +13,7 @@
       "reviews": [
         {
           "id": 1,
-          "fullname": "John Doe",
+          "fullname": "John D",
           "rating": 4.5,
           "date": "2023-10-01",
           "subject": "Ipsum eiusmod eu coloduem ai.",
@@ -23,7 +23,7 @@
         },
         {
           "id": 2,
-          "fullname": "Jane Smith",
+          "fullname": "Jane S",
           "rating": 3.8,
           "date": "2023-09-15",
           "subject": "Good Experience. Ipsum eiusmod eu coloduem ai.",
@@ -33,7 +33,7 @@
         },
         {
           "id": 3,
-          "fullname": "Alice Johnson",
+          "fullname": "Alice J",
           "rating": 5.0,
           "date": "2023-08-20",
           "subject": "Outstanding!",
@@ -43,7 +43,7 @@
         },
         {
           "id": 4,
-          "fullname": "Bob Brown",
+          "fullname": "Bob B",
           "rating": 4.0,
           "date": "2023-07-30",
           "subject": "Very Satisfied",
