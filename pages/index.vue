@@ -16,6 +16,9 @@
       <li>
         <NuxtLink to="/single-blog/blog-demo-1">/Blog Demo 1</NuxtLink>
       </li>
+      <li>
+        <NuxtLink to="/demo/review-cards">Review cards</NuxtLink>
+      </li>
     </ul>
   </div>
 </template>
