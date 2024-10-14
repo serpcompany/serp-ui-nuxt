@@ -40,7 +40,7 @@
       <p class="text-gray-700">{{ review.body }}</p>
     </div>
     <div class="mt-4 border-t border-gray-200 pt-4 text-sm text-gray-500">
-      Date of experience: {{ formatDate(review.date) }}
+      Date: {{ formatDate(review.date) }}
     </div>
     <div class="mt-4 flex items-center space-x-4">
       <button
