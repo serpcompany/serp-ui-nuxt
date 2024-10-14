@@ -1,20 +1,26 @@
 <template>
   <div class="container py-10">
-    <ul>
+    <h1 class="text-3xl">Modules</h1>
+    <h2 class="mt-6 text-2xl">Blog</h2>
+    <ul class="list-disc pl-5">
       <li>
-        <NuxtLink to="/company">/company</NuxtLink>
+        <NuxtLink to="/blog/index">Index</NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/company/collection">/company/collection</NuxtLink>
+        <NuxtLink to="/blog/single">Single</NuxtLink>
+      </li>
+    </ul>
+
+    <h2 class="mt-6 text-2xl">Company</h2>
+    <ul class="list-disc pl-5">
+      <li>
+        <NuxtLink to="/company">Index</NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/multipage/multipage-static">/multipage-static</NuxtLink>
+        <NuxtLink to="/company/collection">Collection</NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/multipage/multipage">/multipage</NuxtLink>
-      </li>
-      <li>
-        <NuxtLink to="/single-blog/blog-demo-1">/Blog Demo 1</NuxtLink>
+        <NuxtLink to="/company/multipage">Single - Multipage</NuxtLink>
       </li>
     </ul>
   </div>

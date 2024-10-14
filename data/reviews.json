@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "fullname": "John Doe",
+    "rating": 4.5,
+    "date": "2023-10-01",
+    "subject": "Ipsum eiusmod eu coloduem ai.",
+    "body": "The service was excellent and the staff was very friendly. Pariatur laboris irure irure tempor proident excepteur exercitation cupidatat. Do culpa tempor reprehenderit Lorem proident ea ullamco elit magna cupidatat est sint deserunt proident. Commodo magna incididunt quis voluptate veniam anim anim ipsum commodo reprehenderit tempor quis duis. Minim cupidatat nostrud laboris labore aliquip veniam reprehenderit ea voluptate adipisicing enim.",
+    "reviewSource": "Google",
+    "avatar": "https://avatar.iran.liara.run/public/76"
+  },
+  {
+    "id": 2,
+    "fullname": "Jane Smith",
+    "rating": 3.8,
+    "date": "2023-09-15",
+    "subject": "Good Experience. Ipsum eiusmod eu coloduem ai.",
+    "body": "Overall, a good experience but there is room for improvement. Sunt non sit eiusmod sunt deserunt mollit adipisicing anim sint. Exercitation veniam sint pariatur nulla nulla anim pariatur aliqua amet ea tempor duis. Incididunt anim ad fugiat ex elit eu amet ex laboris.",
+    "reviewSource": "Yelp",
+    "avatar": "https://avatar.iran.liara.run/public/74"
+  },
+  {
+    "id": 3,
+    "fullname": "Alice Johnson",
+    "rating": 5.0,
+    "date": "2023-08-20",
+    "subject": "Outstanding!",
+    "body": "Absolutely outstanding! Highly recommend to everyone. Id cillum laborum sit laborum voluptate cupidatat enim consequat reprehenderit adipisicing qui. Sit pariatur reprehenderit elit laboris consectetur. Eu minim quis excepteur fugiat deserunt sunt ea nisi Lorem. Ut tempor id anim magna consectetur. Fugiat non laborum enim minim commodo nostrud tempor adipisicing Lorem voluptate et labore. Eu officia officia est proident officia aliqua ipsum ea magna nisi ipsum.",
+    "reviewSource": "TripAdvisor",
+    "avatar": "https://avatar.iran.liara.run/public/35"
+  },
+  {
+    "id": 4,
+    "fullname": "Bob Brown",
+    "rating": 4.0,
+    "date": "2023-07-30",
+    "subject": "Very Satisfied",
+    "body": "Very satisfied with the service provided. Will come back again. Fugiat elit aliquip et sit ipsum excepteur est velit nulla. Ad velit occaecat officia velit proident elit labore dolore velit cupidatat. Minim consectetur aute tempor qui minim. Ipsum do consequat minim anim incididunt magna id laboris minim exercitation sunt laborum pariatur. Sit cillum elit do elit exercitation tempor excepteur enim sint. Culpa incididunt ut velit id excepteur duis deserunt minim. Lorem proident commodo culpa elit anim reprehenderit duis cillum adipisicing culpa sit amet commodo consectetur.",
+    "reviewSource": "Facebook",
+    "avatar": "https://avatar.iran.liara.run/public/89"
+  }
+]
