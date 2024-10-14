@@ -45,12 +45,13 @@
           </div>
         </div>
 
-        <!-- image -->
+        <!-- company logo -->
         <div class="ml-4 flex-grow">
           <img
-            :src="company.image"
+            :src="company.logo"
             :alt="company.name"
-            class="h-auto w-full max-w-xs object-cover"
+            class="h-10 w-full max-w-xs"
+            loading="lazy"
           />
         </div>
       </div>

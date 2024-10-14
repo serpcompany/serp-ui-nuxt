@@ -16,7 +16,7 @@
           >
             <!-- company image/logo -->
             <img
-              :src="company.image"
+              :src="company.logo"
               :alt="`${company.name} logo`"
               class="object-contain transition-all duration-300"
               :class="{ 'h-10': isScrolled, 'h-16': !isScrolled }"
