@@ -1,18 +1,22 @@
 <template>
+  <div />
+</template>
+
+<!-- <template>
   <ContentRenderer v-if="blog">
     <div class="bg-white">
-      <div class="bg-primary pt-20 lg:px-14">
+      <div class="pt-20 bg-primary lg:px-14">
         <div class="flex items-center">
           <NuxtLinkLocale
             to="/blog"
-            class="absolute left-3 top-20 z-10 text-white lg:left-36"
+            class="absolute z-10 text-white left-3 top-20 lg:left-36"
           >
             &larr; {{ $t('blog.backLabel') }}
           </NuxtLinkLocale>
           <div class="max-w-6xl px-3 py-20 lg:px-20">
             <div class="flex gap-2">
               <NuxtLink v-for="tag in blog.tags" :key="tag.name" to="/">
-                <Badge class="bg-white/20 text-white">{{ tag.name }}</Badge>
+                <Badge class="text-white bg-white/20">{{ tag.name }}</Badge>
               </NuxtLink>
             </div>
             <h2
@@ -26,9 +30,9 @@
           </div>
         </div>
       </div>
-      <div class="mx-auto max-w-5xl px-4">
+      <div class="max-w-5xl px-4 mx-auto">
         <div
-          class="flex items-end justify-between border-b pb-4 pt-8 text-lg font-medium text-gray-400"
+          class="flex items-end justify-between pt-8 pb-4 text-lg font-medium text-gray-400 border-b"
         >
           <div v-if="blog.author">
             <div>Author</div>
@@ -42,11 +46,11 @@
             {{ formatDate({ date: new Date(blog.created_at) }) }}
           </div>
         </div>
-        <div class="mt-6 pb-20 pt-4 lg:flex lg:gap-12">
+        <div class="pt-4 pb-20 mt-6 lg:flex lg:gap-12">
           <div class="flex-1 lg:pl-4">
             <ContentRendererMarkdown
               :value="formattedContent"
-              class="prose text-lg dark:prose-invert"
+              class="text-lg prose dark:prose-invert"
             />
           </div>
           <div class="hidden w-[310px] flex-none lg:block">
@@ -70,17 +74,17 @@ const mockBlog = {
   excerpt: 'This is a brief excerpt of the blog post content.',
   content: `
   # Sample Blog Post
-  
+
   This is the main content of the blog post. It can include various markdown elements.
-  
+
   ## Subheading
-  
+
   - List item 1
   - List item 2
   - List item 3
-  
+
   [Link to another page](https://example.com)
-  
+
   ![Image description](https://example.com/image.jpg)
     `,
   created_at: '2024-10-09T12:00:00Z',
@@ -121,4 +125,4 @@ const parseContent = async () => {
 
 // Call the parsing function
 parseContent();
-</script>
+</script> -->

@@ -4,7 +4,7 @@
     <h2 class="mt-6 text-2xl">Blog</h2>
     <ul class="list-disc pl-5">
       <li>
-        <NuxtLink to="/blog/index">Index</NuxtLink>
+        <NuxtLink to="/blog/">Index</NuxtLink>
       </li>
       <li>
         <NuxtLink to="/blog/single">Single</NuxtLink>
