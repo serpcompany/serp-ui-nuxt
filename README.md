@@ -21,9 +21,8 @@ test:unit
 4. Run Vitest UI
 
 ```pnpm
-vitest:ui
+pnpm vitest:ui
 ```
-
 - **Visit**: http://localhost:51204/**vitest**/#/
 
-![alt text](.docs/images/vitest-ui.png)
+
