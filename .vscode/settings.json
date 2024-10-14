@@ -1,7 +1,8 @@
 {
   "[html]": {
     "editor.formatOnSave": true,
-    "editor.autoIndent": "full"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.autoIndent": "advanced"
   },
   "[vue]": {
     "editor.formatOnSave": true,
@@ -13,13 +14,13 @@
   },
   "[typescript]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
   },
   "html.format.enable": false,
   "html.format.preserveNewLines": true,
   "html.format.wrapLineLength": 0,
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  }
+  "editor.formatOnSaveMode": "modifications"
 }
