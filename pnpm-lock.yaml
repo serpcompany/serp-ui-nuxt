@@ -63,6 +63,9 @@ importers:
       '@vitest/coverage-v8':
         specifier: 2.1.3
         version: 2.1.3(vitest@2.1.3(@types/node@22.7.5)(@vitest/ui@2.1.3)(jsdom@25.0.1)(terser@5.34.1))
+      '@vitest/eslint-plugin':
+        specifier: ^1.1.7
+        version: 1.1.7(@typescript-eslint/utils@8.9.0(eslint@9.12.0(jiti@2.3.3))(typescript@5.6.3))(eslint@9.12.0(jiti@2.3.3))(typescript@5.6.3)(vitest@2.1.3(@types/node@22.7.5)(@vitest/ui@2.1.3)(jsdom@25.0.1)(terser@5.34.1))
       '@vitest/ui':
         specifier: ^2.1.3
         version: 2.1.3(vitest@2.1.3)
@@ -72,6 +75,9 @@ importers:
       eslint:
         specifier: ^9.12.0
         version: 9.12.0(jiti@2.3.3)
+      eslint-plugin-vitest-globals:
+        specifier: ^1.5.0
+        version: 1.5.0
       eslint-plugin-vue:
         specifier: ^9.28.0
         version: 9.29.0(eslint@9.12.0(jiti@2.3.3))
@@ -1488,6 +1494,19 @@ packages:
       '@vitest/browser':
         optional: true
 
+  '@vitest/eslint-plugin@1.1.7':
+    resolution: {integrity: sha512-pTWGW3y6lH2ukCuuffpan6kFxG6nIuoesbhMiQxskyQMRcCN5t9SXsKrNHvEw3p8wcCsgJoRqFZVkOTn6TjclA==}
+    peerDependencies:
+      '@typescript-eslint/utils': '>= 8.0'
+      eslint: '>= 8.57.0'
+      typescript: '>= 5.0.0'
+      vitest: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+      vitest:
+        optional: true
+
   '@vitest/expect@2.1.3':
     resolution: {integrity: sha512-SNBoPubeCJhZ48agjXruCI57DvxcsivVDdWz+SSsmjTT4QN/DfHk3zB/xKsJqMs26bLZ/pNRLnCf0j679i0uWQ==}
 
@@ -2431,6 +2450,9 @@ packages:
     engines: {node: '>=18.18'}
     peerDependencies:
       eslint: '>=8.56.0'
+
+  eslint-plugin-vitest-globals@1.5.0:
+    resolution: {integrity: sha512-ZSsVOaOIig0oVLzRTyk8lUfBfqzWxr/J3/NFMfGGRIkGQPejJYmDH3gXmSJxAojts77uzAGB/UmVrwi2DC4LYA==}
 
   eslint-plugin-vue@9.29.0:
     resolution: {integrity: sha512-hamyjrBhNH6Li6R1h1VF9KHfshJlKgKEg3ARbGTn72CMNDSMhWbgC7NdkRDEh25AFW+4SDATzyNM+3gWuZii8g==}
@@ -6490,6 +6512,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@vitest/eslint-plugin@1.1.7(@typescript-eslint/utils@8.9.0(eslint@9.12.0(jiti@2.3.3))(typescript@5.6.3))(eslint@9.12.0(jiti@2.3.3))(typescript@5.6.3)(vitest@2.1.3(@types/node@22.7.5)(@vitest/ui@2.1.3)(jsdom@25.0.1)(terser@5.34.1))':
+    dependencies:
+      '@typescript-eslint/utils': 8.9.0(eslint@9.12.0(jiti@2.3.3))(typescript@5.6.3)
+      eslint: 9.12.0(jiti@2.3.3)
+    optionalDependencies:
+      typescript: 5.6.3
+      vitest: 2.1.3(@types/node@22.7.5)(@vitest/ui@2.1.3)(jsdom@25.0.1)(terser@5.34.1)
+
   '@vitest/expect@2.1.3':
     dependencies:
       '@vitest/spy': 2.1.3
@@ -7573,6 +7603,8 @@ snapshots:
       regjsparser: 0.10.0
       semver: 7.6.3
       strip-indent: 3.0.0
+
+  eslint-plugin-vitest-globals@1.5.0: {}
 
   eslint-plugin-vue@9.29.0(eslint@9.12.0(jiti@2.3.3)):
     dependencies:
