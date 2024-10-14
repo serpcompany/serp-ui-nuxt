@@ -38,16 +38,8 @@
           :company="company"
         />
 
-        <!-- reviews -->
-        <company-reviews
-          v-else-if="section === 'Reviews'"
-          id="reviews"
-          :section="section"
-          :company="company"
-        />
-
         <!-- faqs -->
-        <FaqSection
+        <faq-section
           v-else-if="section === 'FAQ'"
           id="faq"
           :faqs="company.faqs"
@@ -65,6 +57,15 @@
           :show-expanded-content="false"
           :show-read-more="false"
         />
+
+        <!-- reviews -->
+        <company-reviews
+          v-else-if="section === 'Reviews'"
+          id="reviews"
+          :section="section"
+          :company="company"
+          :reviews="reviews"
+        />
       </section>
     </main>
   </div>
@@ -73,28 +74,23 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import companiesData from '@/data/companies.json';
+import reviewsData from '@/data/reviews.json';
 
 const sections = [
   'Overview',
   'Pricing',
   'Features',
-  'Reviews',
   'FAQ',
   'Alternatives',
+  'Reviews',
 ];
 
 const companies = ref(companiesData.companies);
 const company = ref(companies.value[0]);
 
-const isScrolled = ref(false);
+const reviews = ref(reviewsData);
 
-// const scrollToSection = (sectionId) => {
-//   const element = document.getElementById(sectionId);
-//   if (element) {
-//     element.scrollIntoView({ behavior: 'smooth' });
-//     history.pushState(null, '', `#${sectionId}`);
-//   }
-// };
+const isScrolled = ref(false);
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 0;

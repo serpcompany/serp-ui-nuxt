@@ -122,7 +122,7 @@
     <!-- card bottom half -->
     <div v-if="isExpanded && showExpandedContent" class="my-10">
       <div class="border-t py-8">
-        <p class="text-sm text-gray-700">{{ company.overview }}</p>
+        <p class="text-gray-700">{{ company.overview }}</p>
       </div>
 
       <!-- pros & cons -->

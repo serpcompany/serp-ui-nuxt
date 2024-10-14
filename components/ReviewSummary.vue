@@ -2,7 +2,7 @@
   <div class="space-y-5">
     <div class="flex flex-col items-center md:flex-row md:items-start">
       <div class="mb-4 text-center md:mb-0 md:mr-8 md:w-auto">
-        <h3 class="text-4xl font-bold">{{ averageRating.toFixed(1) }}</h3>
+        <h3 class="text-4xl font-bold">{{ averageRating }}</h3>
         <p class="text-sm">({{ totalReviews }} reviews)</p>
       </div>
       <div class="order-3 w-full md:order-2 md:flex-1">
