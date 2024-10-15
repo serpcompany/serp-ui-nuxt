@@ -8,6 +8,7 @@ export interface Company {
   website: string;
   description: string;
   rating: number;
+  screenshots: string[];
   reviews: {
     id: number;
     author: string;
