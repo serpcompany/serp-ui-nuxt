@@ -85,7 +85,6 @@
 import { ref } from 'vue';
 import companiesData from '@/data/companies.json';
 const companies = ref(companiesData.companies);
-console.log('Companies data:', companies.value);
 
 const tags = [
   {
