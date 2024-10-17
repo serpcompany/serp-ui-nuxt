@@ -24,7 +24,7 @@
             >
               {{ blog.title }}
             </h2>
-            <p class="mt-4 text-xl leading-8 text-gray-300">
+            <p class="mt-4 text-xl text-gray-300 leading-8">
               {{ blog.excerpt }}
             </p>
           </div>

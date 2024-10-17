@@ -171,11 +171,11 @@ const articleContent = ref(`
           <td>Empty</td>
           <td>Overflowing</td>
         </tr>
-        <tr class="m-0 border-t p-0 even:bg-muted">
+        <tr class="p-0 m-0 border-t even:bg-muted">
           <td>Modest</td>
           <td>Satisfied</td>
         </tr>
-        <tr class="m-0 border-t p-0 even:bg-muted">
+        <tr class="p-0 m-0 border-t even:bg-muted">
           <td>Full</td>
           <td>Ecstatic</td>
         </tr>
