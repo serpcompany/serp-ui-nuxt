@@ -1,62 +1,36 @@
 <template>
   <div>
-    <header
-      ref="header"
-      :class="{
-        'py-2': isScrolled,
-        'py-4 sm:py-8': !isScrolled,
-        'fixed left-0 top-0 z-50 w-full bg-white': isScrolled,
-      }"
-    >
-      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <header ref="header" :class="headerClasses">
+      <div :class="containerClasses">
         <!-- header top (company info) -->
         <div class="flex flex-col items-center justify-between sm:flex-row">
-          <div
-            class="flex w-full items-center justify-between sm:justify-start"
-          >
+          <div class="flex w-full items-center sm:justify-start">
             <!-- company image/logo -->
             <img
               :src="company.logo"
               :alt="`${company.name} logo`"
-              class="object-contain transition-all duration-300"
-              :class="{ 'h-10': isScrolled, 'h-16': !isScrolled }"
+              class="rounded border-2 border-slate-200 object-contain transition-all duration-300"
+              :class="{ 'h-16': isScrolled, 'h-32': !isScrolled }"
             />
 
-            <!-- company info -->
-            <div
-              class="ml-4 flex-grow"
-              :class="{ 'hidden sm:block': isScrolled }"
-            >
+            <div v-if="!isScrolled" class="ml-4 flex-grow sm:block">
               <h1
-                class="text-2xl font-bold text-primary transition-all duration-300 sm:text-3xl"
-                :class="{
-                  'text-xl sm:text-lg': isScrolled,
-                  'mt-0': isScrolled,
-                }"
+                class="font-bold transition-all duration-300"
+                :class="titleClasses"
               >
                 {{ company.name }}
               </h1>
-              <p
-                class="text-xs transition-all duration-300"
-                :class="{
-                  'hidden sm:block': isScrolled,
-                  'pt-1 text-muted-foreground sm:pt-2 sm:text-sm': !isScrolled,
-                }"
-              >
+              <p class="pt-1 text-xs text-muted-foreground sm:text-sm">
                 {{ company.oneliner }}
               </p>
             </div>
 
-            <!-- Mobile button when scrolled -->
-            <div
-              class="ml-4 flex-grow sm:hidden"
-              :class="{ hidden: !isScrolled }"
-            >
+            <div v-if="!isScrolled" class="ml-4 flex-grow sm:hidden">
               <a
                 :href="company.website"
                 target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex w-full items-center justify-center whitespace-nowrap rounded-md bg-red-500 px-4 py-2 text-xs text-white"
+                rel="noopener"
+                class="cta-button"
               >
                 View Website
               </a>
@@ -65,33 +39,45 @@
 
           <!-- Desktop button -->
           <div
-            class="mt-4 w-full sm:mt-0 sm:w-auto"
-            :class="{ 'hidden sm:block': isScrolled }"
+            v-if="!isScrolled"
+            class="mt-4 hidden w-full sm:mt-0 sm:block sm:w-auto"
           >
             <a
               :href="company.website"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex w-full items-center justify-center whitespace-nowrap rounded-md bg-red-500 px-4 py-2 text-xs text-white transition-opacity duration-300 sm:w-auto sm:text-sm"
+              class="inline-flex w-full items-center justify-center whitespace-nowrap rounded-md border-2 border-blue-500 px-4 py-2 text-xs text-blue-500 transition-opacity duration-300 sm:w-auto sm:text-sm"
             >
               View Website
             </a>
           </div>
         </div>
-        <!-- header bottom (nav links) -->
-        <div
-          class="-mx-4 mt-4 overflow-x-auto px-4 sm:px-0"
-          :class="{ 'mt-2': isScrolled }"
-        >
-          <nav class="flex space-x-4 whitespace-nowrap border-b border-t">
+
+        <!-- Navigation Links -->
+        <div :class="navContainerClasses">
+          <nav ref="nav" class="relative flex border-b px-4 sm:px-0">
             <a
               v-for="section in sections"
               :key="section"
-              :href="'#' + section.toLowerCase()"
-              class="flex-shrink-0 px-1 py-2 text-sm text-muted-foreground transition-colors duration-200 hover:text-primary sm:px-2 sm:text-base"
+              class="nav-link relative mx-2 flex-grow cursor-pointer py-2 text-center transition-colors duration-300"
+              :class="{ 'text-blue-500': navTab === section }"
+              :aria-current="navTab === section ? 'page' : undefined"
+              @click="handleTabChange(section)"
             >
               {{ section }}
             </a>
+            <div
+              v-show="!isScrolled"
+              ref="underline"
+              class="absolute bottom-0 h-0.5 bg-blue-500 transition-all duration-300 ease-in-out"
+              :style="underlineStyle"
+            />
+            <div
+              v-show="isScrolled"
+              ref="underline"
+              class="absolute bottom-0 h-0.5 bg-blue-500 transition-all duration-300 ease-in-out"
+              :style="underlineStyle"
+            />
           </nav>
         </div>
       </div>
@@ -100,21 +86,87 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted, watchEffect } from 'vue';
 
-const props = defineProps({
-  company: {
-    type: Object,
-    required: true,
-  },
-  sections: {
-    type: Array as () => string[],
-    required: true,
-  },
+interface Company {
+  logo: string;
+  name: string;
+  oneliner: string;
+  website: string;
+}
+
+const props = defineProps<{
+  company: Company;
+  sections: string[];
+}>();
+
+const header = ref<HTMLElement | null>(null);
+const nav = ref<HTMLElement | null>(null);
+const underline = ref<HTMLElement | null>(null);
+
+const isScrolled = ref(false);
+const navTab = ref<string>();
+const activeIndex = ref(0);
+
+watchEffect(() => {
+  navTab.value = props.sections[0];
 });
 
-const header = ref(null);
-const isScrolled = ref(false);
+const headerClasses = computed(
+  () =>
+    `w-full transition-all duration-300 bg-white ${
+      isScrolled.value ? 'py-2' : 'py-4 sm:py-8'
+    }`,
+);
+
+const containerClasses = computed(
+  () =>
+    `mx-auto max-w-4xl flex ${
+      isScrolled.value ? 'flex-row items-center' : 'flex-col justify-between'
+    }`,
+);
+
+const navContainerClasses = computed(
+  () => `mt-4 ${isScrolled.value ? 'mt-2 ml-auto' : ''}`,
+);
+
+const titleClasses = computed(
+  () =>
+    `transition-all text-primary duration-300 ${
+      isScrolled.value ? 'text-xl sm:text-lg' : 'text-2xl sm:text-3xl'
+    }`,
+);
+
+const underlineStyle = computed(() => {
+  if (!nav.value || !underline.value) return {};
+
+  const navItems = nav.value.querySelectorAll('.nav-link');
+  const activeItem = navItems[activeIndex.value];
+  if (!activeItem) return {};
+
+  const navRect = nav.value.getBoundingClientRect();
+  const activeRect = activeItem.getBoundingClientRect();
+
+  return {
+    width: `${activeRect.width}px`,
+    transform: `translateX(${activeRect.left - navRect.left}px)`,
+  };
+});
+
+const handleTabChange = (tab: string) => {
+  navTab.value = tab;
+  activeIndex.value = props.sections.indexOf(tab);
+
+  const sectionElement = document.getElementById(tab.toLowerCase());
+  const headerHeight = header.value?.offsetHeight || 0;
+
+  if (sectionElement) {
+    window.scrollTo({
+      top: sectionElement.offsetTop - headerHeight,
+      behavior: 'smooth',
+    });
+  }
+};
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 0;
@@ -128,3 +180,10 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
 </script>
+
+<style scoped>
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+</style>
