@@ -86,7 +86,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted, watchEffect } from 'vue';
+import {
+  ref,
+  computed,
+  onMounted,
+  onUnmounted,
+  watchEffect,
+  nextTick,
+} from 'vue';
 import { debounce } from '@/lib/utils';
 
 interface Company {
@@ -169,8 +176,19 @@ const handleTabChange = (tab: string) => {
   }
 };
 
+// whenn we scroll a little than causes isScrolled to become true
+// which contracts the multi header
+// which causes isScrolled to become false
 const handleScroll = debounce(() => {
-  isScrolled.value = window.scrollY > 0;
+  const newValue = window.scrollY > 0;
+  if (isScrolled.value !== newValue) {
+    // hence we scroll further than the user scrolls
+    // so that when scrollY is small then it doesn't reset to 0
+    window.scrollTo({
+      top: window.scrollY * 2,
+    });
+    isScrolled.value = newValue;
+  }
 }, 50);
 
 onMounted(() => {
