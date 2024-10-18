@@ -87,6 +87,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted, watchEffect } from 'vue';
+import { debounce } from '@/lib/utils';
 
 interface Company {
   logo: string;
@@ -168,9 +169,9 @@ const handleTabChange = (tab: string) => {
   }
 };
 
-const handleScroll = () => {
+const handleScroll = debounce(() => {
   isScrolled.value = window.scrollY > 0;
-};
+}, 50);
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
